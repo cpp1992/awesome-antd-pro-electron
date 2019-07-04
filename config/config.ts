@@ -82,7 +82,8 @@ export default {
   block: {
     defaultGitUrl: 'https://github.com/ant-design/pro-blocks',
   },
-  hash: true,
+  history: 'hash', // router mode, hash for electron
+  hash: true, // hash postfix
   targets: {
     ie: 11,
   },
