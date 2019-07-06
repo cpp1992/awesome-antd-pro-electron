@@ -6,8 +6,7 @@ import { connect } from 'dva';
 import { isAntDesignPro } from '@/utils/utils';
 import styles from './index.less';
 
-const firstUpperCase = (pathString: string): string =>
-  pathString
+const firstUpperCase = (pathString: string): string => pathString
     .replace('.', '')
     .split(/\/|-/)
     .map((s): string => s.toLowerCase().replace(/( |^)[a-z]/g, L => L.toUpperCase()))

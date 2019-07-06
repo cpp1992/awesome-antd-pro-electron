@@ -1,4 +1,6 @@
-import { Badge, Icon, Spin, Tabs } from 'antd';
+import {
+ Badge, Icon, Spin, Tabs,
+} from 'antd';
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import NoticeList, { NoticeIconTabProps } from './NoticeList';
@@ -84,7 +86,9 @@ export default class NoticeIcon extends Component<NoticeIconProps> {
   };
 
   getNotificationBox(): React.ReactNode {
-    const { children, loading, clearText, viewMoreText } = this.props;
+    const {
+ children, loading, clearText, viewMoreText,
+} = this.props;
     if (!children) {
       return null;
     }
@@ -94,7 +98,9 @@ export default class NoticeIcon extends Component<NoticeIconProps> {
         if (!child) {
           return null;
         }
-        const { list, title, count, tabKey, showClear, showViewMore } = child.props;
+        const {
+ list, title, count, tabKey, showClear, showViewMore,
+} = child.props;
         const len = list && list.length ? list.length : 0;
         const msgCount = count || count === 0 ? count : len;
         const tabTitle: string = msgCount > 0 ? `${title} (${msgCount})` : title;
@@ -136,7 +142,9 @@ export default class NoticeIcon extends Component<NoticeIconProps> {
   };
 
   render(): React.ReactNode {
-    const { className, count, popupVisible, bell } = this.props;
+    const {
+ className, count, popupVisible, bell,
+} = this.props;
     const { visible } = this.state;
     const noticeButtonClass = classNames(className, styles.noticeButton);
     const notificationBox = this.getNotificationBox();

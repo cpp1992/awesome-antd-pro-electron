@@ -114,7 +114,9 @@ export default class HeaderSearch extends Component<HeaderSearchProps, HeaderSea
   };
 
   render() {
-    const { className, placeholder, open, ...restProps } = this.props;
+    const {
+ className, placeholder, open, ...restProps
+} = this.props;
     const { searchMode, value } = this.state;
     delete restProps.defaultOpen; // for rc-select not affected
     const inputClass = classNames(styles.input, {

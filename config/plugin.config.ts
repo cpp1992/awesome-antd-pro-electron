@@ -53,7 +53,7 @@ export default (config: any) => {
     ]);
   }
 
-  config.target('electron-renderer')
+  // config.target('electron-renderer')
 
   // optimize chunks
   config.optimization

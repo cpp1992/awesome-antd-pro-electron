@@ -4,6 +4,8 @@ import { Subscription } from 'dva';
 import { Effect } from './connect.d';
 import { NoticeIconData } from '@/components/NoticeIcon';
 import { queryNotices } from '@/services/user';
+import { queryModel } from '@/services/model';
+import { LfResponse } from '@/interface';
 
 export interface NoticeItem extends NoticeIconData {
   id: string;
@@ -14,12 +16,14 @@ export interface NoticeItem extends NoticeIconData {
 export interface GlobalModelState {
   collapsed: boolean;
   notices: NoticeItem[];
+  models: any[];
 }
 
 export interface GlobalModelType {
   namespace: 'global';
   state: GlobalModelState;
   effects: {
+    queryModel: Effect;
     fetchNotices: Effect;
     clearNotices: Effect;
     changeNoticeReadState: Effect;
@@ -38,10 +42,27 @@ const GlobalModel: GlobalModelType = {
   state: {
     collapsed: false,
     notices: [],
+    models: [],
   },
 
   effects: {
-    *fetchNotices(_, { call, put, select }) {
+    * queryModel({ payload }, { call, put, select }) {
+      const name = payload.name.replace('Form', '');
+      const type = `${payload.name}/changeModelName`;
+
+      const response: LfResponse = yield call(queryModel, payload);
+      const fields = response.data.entity;
+
+      // put to userForm model
+      yield put({
+        type,
+        payload: {
+          name,
+          fields,
+        },
+      });
+    },
+    * fetchNotices(_, { call, put, select }) {
       const data = yield call(queryNotices);
       yield put({
         type: 'saveNotices',
@@ -58,7 +79,7 @@ const GlobalModel: GlobalModelType = {
         },
       });
     },
-    *clearNotices({ payload }, { put, select }) {
+    * clearNotices({ payload }, { put, select }) {
       yield put({
         type: 'saveClearedNotices',
         payload,
@@ -75,16 +96,14 @@ const GlobalModel: GlobalModelType = {
         },
       });
     },
-    *changeNoticeReadState({ payload }, { put, select }) {
-      const notices: NoticeItem[] = yield select(state =>
-        state.global.notices.map(item => {
+    * changeNoticeReadState({ payload }, { put, select }) {
+      const notices: NoticeItem[] = yield select(state => state.global.notices.map(item => {
           const notice = { ...item };
           if (notice.id === payload) {
             notice.read = true;
           }
           return notice;
-        }),
-      );
+        }));
 
       yield put({
         type: 'saveNotices',
@@ -102,7 +121,7 @@ const GlobalModel: GlobalModelType = {
   },
 
   reducers: {
-    changeLayoutCollapsed(state = { notices: [], collapsed: true }, { payload }): GlobalModelState {
+    changeLayoutCollapsed(state = { notices: [], collapsed: true, models: [] }, { payload }): GlobalModelState {
       return {
         ...state,
         collapsed: payload,
@@ -115,7 +134,7 @@ const GlobalModel: GlobalModelType = {
         notices: payload,
       };
     },
-    saveClearedNotices(state = { notices: [], collapsed: true }, { payload }): GlobalModelState {
+    saveClearedNotices(state = { notices: [], collapsed: true, models: [] }, { payload }): GlobalModelState {
       return {
         collapsed: false,
         ...state,

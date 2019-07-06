@@ -17,6 +17,7 @@
     "noImplicitThis": false,
     "strictNullChecks": false,
     "allowUnreachableCode": false,
+    "resolveJsonModule": true,
     "allowJs": true,
     "experimentalDecorators": true,
     "strict": true,

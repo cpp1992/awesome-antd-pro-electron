@@ -34,7 +34,7 @@ const Model: ModelType = {
   },
 
   effects: {
-    *logout(_, { put }) {
+    * logout(_, { put }) {
       const { redirect } = getPageQuery();
       // redirect
       if (window.location.pathname !== '/user/login' && !redirect) {

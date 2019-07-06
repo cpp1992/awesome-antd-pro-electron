@@ -4,7 +4,6 @@ import { Reducer } from 'redux';
 import { LfResponse } from '@/interface';
 import { queryCurrent, query as queryUsers } from '@/services/user';
 
-
 export interface CurrentUser {
   avatar?: string;
   name?: string;
@@ -43,7 +42,7 @@ const UserModel: UserModelType = {
   },
 
   effects: {
-    *fetch(_, { call, put }) {
+    * fetch(_, { call, put }) {
       const response: LfResponse = yield call(queryUsers);
       const payload = response.data.entity;
       yield put({
@@ -51,8 +50,8 @@ const UserModel: UserModelType = {
         payload,
       });
     },
-    *fetchCurrent(_, { call, put }) {
-      const response = yield call(queryCurrent);
+    * fetchCurrent(_, { call, put }) {
+      const response: LfResponse = yield call(queryCurrent);
       const payload = response.data.entity[0];
       yield put({
         type: 'saveCurrentUser',

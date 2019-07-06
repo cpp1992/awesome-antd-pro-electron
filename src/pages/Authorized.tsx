@@ -3,7 +3,9 @@ import Redirect from 'umi/redirect';
 import { connect } from 'dva';
 import pathToRegexp from 'path-to-regexp';
 import Authorized from '@/utils/Authorized';
-import { ConnectProps, ConnectState, Route, UserModelState } from '@/models/connect';
+import {
+ ConnectProps, ConnectState, Route, UserModelState,
+} from '@/models/connect';
 
 interface AuthComponentProps extends ConnectProps {
   user: UserModelState;
@@ -27,6 +29,10 @@ const getRouteAuthority = (path: string, routeData: Route[]) => {
   return authorities;
 };
 
+/**
+ * Functional Component 功能组件
+ * @param param0 参数
+ */
 const AuthComponent: React.FC<AuthComponentProps> = ({
   children,
   route = {

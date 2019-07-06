@@ -59,8 +59,8 @@ export const builder = (data: BaseData, message = '', code = 0, config = null, h
  * 获取url查询参数字符串，包装为json对象
  * @param {any} options Url查询参数字符串
  */
-export const getQueryParameters = (options) => {
-  const url = options.url;
+export const getQueryParameters = options => {
+  const { url } = options;
   const search = url.split('?')[1];
   if (!search) {
     return {};

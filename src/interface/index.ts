@@ -23,7 +23,7 @@ export interface FilterFormList {
   placeholder?: string | string[];
   value?: string[];
   fieldNames?: any;
-  options?: Array<{ value: any, label: string }>;
+  options?: { value: any, label: string }[];
   change?: Function;
   disabledTime?: (dates: [object, object], partial: 'start'|'end') => any;
   attrs?: any;
@@ -254,8 +254,8 @@ export interface menuItem {
   title: string,
   url?: string,
   icon?: string,
-  permission: string | Array<string> | boolean,
-  children?: Array<menuItem>,
+  permission: string | string[] | boolean,
+  children?: menuItem[],
 }
 
 export interface MockConfig {

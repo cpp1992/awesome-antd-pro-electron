@@ -30,20 +30,6 @@
     "test:all": "node ./tests/run-tests.js",
     "test:component": "umi test ./src/components"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint-staged"
-    }
-  },
-  "lint-staged": {
-    "**/*.less": "stylelint --syntax less",
-    "**/*.{js,jsx,tsx,ts,less,md,json}": [
-      "prettier --write",
-      "git add"
-    ],
-    "**/*.{js,jsx}": "npm run lint-staged:js",
-    "**/*.{js,ts,tsx}": "npm run lint-staged:js"
-  },
   "browserslist": [
     "> 1%",
     "last 2 versions",
@@ -52,15 +38,20 @@
   "dependencies": {
     "@ant-design/pro-layout": "^4.5.9",
     "@antv/data-set": "^0.10.2",
+    "@types/lodash.debounce": "^4.0.6",
     "antd": "^3.20.0",
+    "bizcharts": "^3.5.3-beta.0",
+    "bizcharts-plugin-slider": "^2.1.1-beta.1",
     "classnames": "^2.2.6",
     "dva": "^2.4.1",
     "lodash": "^4.17.11",
     "lodash-decorators": "^6.0.1",
     "lodash-id": "^0.14.0",
+    "lodash.debounce": "^4.0.8",
     "lowdb": "^1.0.0",
     "memoize-one": "^5.0.4",
     "moment": "^2.24.0",
+    "numeral": "^2.0.6",
     "omit.js": "^1.0.2",
     "path-to-regexp": "^3.0.0",
     "prop-types": "^15.7.2",
@@ -70,6 +61,7 @@
     "react-copy-to-clipboard": "^5.0.1",
     "react-document-title": "^2.0.3",
     "react-dom": "^16.8.6",
+    "react-fittext": "^1.0.0",
     "react-media": "^1.9.2",
     "react-media-hook2": "^1.0.5",
     "redux": "^4.0.1",
@@ -89,11 +81,13 @@
     "@types/react": "^16.8.19",
     "@types/react-document-title": "^2.0.3",
     "@types/react-dom": "^16.8.4",
+    "@types/webpack-env": "^1.13.9",
     "@umijs/fabric": "^1.1.0",
     "chalk": "^2.4.2",
     "check-prettier": "^1.0.3",
     "cross-env": "^5.2.0",
     "cross-port-killer": "^1.1.1",
+    "electron": "^5.0.6",
     "electron-builder": "^20.44.4",
     "enzyme": "^3.9.0",
     "eslint": "^5.16.0",
