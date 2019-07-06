@@ -1,7 +1,11 @@
+import {
+  tail, first, last, nth, camelCase,
+} from 'lodash';
+import loadashId from 'lodash-id';
 import low, { LowdbSync } from 'lowdb';
 import FileSync from 'lowdb/adapters/FileSync';
 import Memory from 'lowdb/adapters/Memory';
-import loadashId from 'lodash-id';
+
 import user from '../../mock/user';
 import notices from '../../mock/notices';
 import rule from '../pages/user/table-list/_mock';
@@ -78,6 +82,19 @@ pool.model.get('model').push('user').write();
 pool.model.get('model').push('login').write();
 pool.model.set('user', userModel.fields).write();
 pool.model.set('login', loginModel.fields).write();
+
+// const MockModels = require.context('./json', true, /\.json$/)
+
+// MockModels.keys().forEach((fileName: string) => {
+//   const fileNameMeta = tail(fileName.split('/'));
+//   const sectionMeta = {
+//     section: first(fileNameMeta),
+//     modelName: nth(fileNameMeta, -2),
+//     fileName: last(fileNameMeta),
+//     fullPath: fileName,
+//   };
+//   pool.model.set(sectionMeta.modelName, MockModels(fileName).fields).write();
+// })
 
 window.pool = pool;
 

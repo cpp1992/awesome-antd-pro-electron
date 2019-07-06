@@ -5,7 +5,7 @@ import {
 import { pathExistsSync, mkdirpSync, writeFileSync } from 'fs-extra';
 import { resolve } from 'path';
 
-const ERPModels = (require as any).context('@/models/_mocks', true, /\.json$/)
+const ERPModels = (require as any).context('./json', true, /\.json$/)
 
 function mapFieldKeys(fieldConfig: any): any[] {
   const field: any[] = fieldConfig.fields;
