@@ -1,9 +1,13 @@
 {
   "name": "awesome-antd-pro-electron",
   "version": "1.0.0",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/linuxing/awesome-antd-pro-electron"
+  },
   "private": true,
   "main": "main.js",
-  "description": "An out-of-box UI solution for enterprise applications",
+  "description": "An out-of-box UI solution for enterprise applications with electron",
   "scripts": {
     "start": "umi dev",
     "dev": "umi dev",
