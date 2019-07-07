@@ -63,7 +63,7 @@ const lfService: LfService = {
 
       // path example: user.data, user.fields, user.name
       const entities = pool[namespace].get(action);
-      console.log(`Current Entity [${namespace}]:`, entities.value());
+      console.log(`1. Current Entity [${namespace}]:`, entities.value());
 
       switch (method) {
         case 'post':
@@ -115,22 +115,26 @@ const lfService: LfService = {
           break;
         case 'get':
           requestedData = baseData('success', `get ${namespace}`);
+          console.log('2. Checking data:', data);
           if (data === undefined) {
-            console.log('Querying without data...');
-            if (pageParams) {
+            console.log('3. Querying without data...');
+            console.log('4. Checking pagination...', pageParams);
+            if (Object.keys(pageParams).length > 0) {
+              console.log('5. Querying with pagination...');
               const { pageSize } = pageParams;
               requestedData.entity = entities.take(pageSize).sortBy('key').value();
             } else {
-              requestedData.entity = entities.sortBy('key').value();
+              console.log('5. Querying without pagination...');
+              requestedData.entity = entities.value();
             }
           } else if (data.key !== undefined) {
-              console.log('Querying with unique key...', data);
+              console.log('3. Querying with unique key...', data);
               requestedData.entity = entities.find({ key: data.key }).value();
           } else {
             // options.params.pagination, query
-            console.log('Querying with data object...', data);
+            console.log('3. Querying with data object...', data);
             const validQuery = pickBy(data, value => value !== undefined);
-            console.log('Getting with query params...', validQuery);
+            console.log('4. Getting with query params...', validQuery);
             requestedData.entity = entities.find(validQuery).value();
           }
       }

@@ -21,7 +21,7 @@ export const dbInitModule = (pool: any, collections: string[]): { [name: string]
     const adapter = new Memory(collection);
     const dbModule: any = low(adapter);
     dbModule._.mixin(loadashId);
-    dbModule.set('name', collection);
+    dbModule.set('name', collection).write();
     dbModule.set('data', []).write();
     dbModule.set('fields', []).write();
     acc[collection] = dbModule;
@@ -30,7 +30,6 @@ export const dbInitModule = (pool: any, collections: string[]): { [name: string]
 
 
 pool = dbInitModule({}, collections);
-console.log('window pool basic:', pool);
 
 // init some mock data
 const currentUser = user['GET /api/currentUser'];
