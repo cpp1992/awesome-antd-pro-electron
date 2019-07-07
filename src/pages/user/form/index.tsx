@@ -65,7 +65,7 @@ class UserForm extends Component<FormProps> {
     dispatch({
       type: 'userForm/queryModelFields',
       payload: {
-        name: `${name}Form`,
+        url: `/api/${name}/fields`,
       },
     })
   }

@@ -1,3 +1,5 @@
+import { TableListParams } from '@/pages/user/table-list/data';
+
 /**
  * @interface 筛选表格的表单参数
  * @param key 表单的key值，对应filterParams里面的值
@@ -20,6 +22,7 @@ export interface FilterFormList {
   dataIndex?: string;
   width?: string;
   sorter?: boolean;
+  align?: 'center'| 'left' | 'right';
   placeholder?: string | string[];
   value?: string[];
   fieldNames?: any;
@@ -339,13 +342,13 @@ export interface LfRequestOptionParams {
   namespace?: string;
   filter?: any;
   statistic?: any;
-  pageParams?: any;
+  pageParams?: Partial<TableListParams>;
   [name: string]: any;
 }
 
 export interface LfRequestOption {
   url: string;
-  method: string;
+  method?: string;
   params?: LfRequestOptionParams;
   data?: any;
   fetchType?: string;

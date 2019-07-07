@@ -15,7 +15,7 @@ import pool from './db';
  */
 // 创建 axios localforage 实例
 const lfService: LfService = {
-  getModel: (modelName: string) => '',
+  getModel: (modelName: string) => modelName,
 
   validateUrl: (options: LfRequestOption) => {
     const [blank, prefix, namespace, action] = options.url.split('/');
@@ -48,12 +48,12 @@ const lfService: LfService = {
 
   fetch: async (options: LfRequestOption) => new Promise(async (resolve, reject) => {
       const {
-        method,
+        method = 'get',
         data,
-        params: {
- pagination, query, namespace, action,
-},
+        params: { namespace, action = 'data' },
       } = options;
+
+      const pageParams = { ...options.params.pageParams };
 
       const requestedOption: LfRequestOption = {
         ...options,
@@ -61,6 +61,7 @@ const lfService: LfService = {
       let requestedData: BaseData = null;
       let response: LfResponse = null;
 
+      // path example: user.data, user.fields, user.name
       const entities = pool[namespace].get(action);
       console.log(`Current Entity [${namespace}]:`, entities.value());
 
@@ -115,17 +116,23 @@ const lfService: LfService = {
         case 'get':
           requestedData = baseData('success', `get ${namespace}`);
           if (data === undefined) {
-            console.log('Getting without data...', data);
-            requestedData.entity = entities.value();
-          } else if (data.key !== undefined) {
-              console.log('Getting with query key...', data);
-              requestedData.entity = entities.find({ key: data.key }).value();
+            console.log('Querying without data...');
+            if (pageParams) {
+              const { pageSize } = pageParams;
+              requestedData.entity = entities.take(pageSize).sortBy('key').value();
             } else {
-              // options.params.pagination, query
-              const validQuery = pickBy(data, value => value !== undefined);
-              console.log('Getting with query params...', validQuery);
-              requestedData.entity = entities.find(validQuery).value();
+              requestedData.entity = entities.sortBy('key').value();
             }
+          } else if (data.key !== undefined) {
+              console.log('Querying with unique key...', data);
+              requestedData.entity = entities.find({ key: data.key }).value();
+          } else {
+            // options.params.pagination, query
+            console.log('Querying with data object...', data);
+            const validQuery = pickBy(data, value => value !== undefined);
+            console.log('Getting with query params...', validQuery);
+            requestedData.entity = entities.find(validQuery).value();
+          }
       }
       log.info('--------------- Local ---------------------');
       log.info(`${method}  --*--*--*-> `, requestedData);

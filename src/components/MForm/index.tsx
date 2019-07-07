@@ -59,8 +59,8 @@ class MForm extends Component<FormProps> {
       if (!err) {
         const data = convertDate(formItemList, values);
         const payload = {
-          name,
-          action: name,
+          url: `/api/${name}/data`,
+          method: 'post',
           data,
         }
         Modal.info({
@@ -76,10 +76,11 @@ class MForm extends Component<FormProps> {
 
   queryModelFields() {
     const { dispatch, modelName } = this.props;
+    const name = modelName.replace('Form', '');
     dispatch({
       type: 'userForm/queryModelFields',
       payload: {
-        name: modelName,
+        url: `/api/${name}/fields`,
       },
     })
   }

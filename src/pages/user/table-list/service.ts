@@ -1,38 +1,21 @@
-import request from 'umi-request';
-import { TableListParams } from './data.d';
+import { LfRequestOption } from '@/interface';
 
-export async function queryRule(params: TableListParams) {
-  return request('/api/rule', {
-    params,
-  });
+export async function queryModelFields(params: LfRequestOption): Promise<any> {
+  return window.api.request(params);
 }
 
-export async function removeRule(params: TableListParams) {
-  return request('/api/rule', {
-    method: 'POST',
-    data: {
-      ...params,
-      method: 'delete',
-    },
-  });
+export async function queryModel(params: LfRequestOption): Promise<any> {
+  return window.api.request(params);
 }
 
-export async function addRule(params: TableListParams) {
-  return request('/api/rule', {
-    method: 'POST',
-    data: {
-      ...params,
-      method: 'post',
-    },
-  });
+export async function removeModel(params: LfRequestOption): Promise<any> {
+  return window.api.request(params);
 }
 
-export async function updateRule(params: TableListParams) {
-  return request('/api/rule', {
-    method: 'POST',
-    data: {
-      ...params,
-      method: 'update',
-    },
-  });
+export async function addModel(params: LfRequestOption): Promise<any> {
+  return window.api.request(params);
+}
+
+export async function updateModel(params: LfRequestOption): Promise<any> {
+  return window.api.request(params);
 }

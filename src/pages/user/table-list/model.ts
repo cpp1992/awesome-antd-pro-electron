@@ -1,10 +1,11 @@
 import { AnyAction, Reducer } from 'redux';
 import { EffectsCommandMap } from 'dva';
+import { param } from 'change-case';
 import {
  addModel, queryModel, removeModel, updateModel, queryModelFields,
-} from './service.local';
+} from './service';
 
-import { LfResponse } from '@/interface';
+import { LfResponse, FilterFormList, LfRequestOption } from '@/interface';
 import { TableListData } from './data.d';
 import { StandardTableColumnProps } from './components/StandardTable';
 
@@ -23,12 +24,12 @@ export interface ModelType {
   namespace: string;
   state: StateType;
   effects: {
-    fetch: Effect;
     add: Effect;
     remove: Effect;
     update: Effect;
     queryModelFields: Effect;
     queryModelData: Effect;
+    fetch?: Effect;
   };
   reducers: {
     save: Reducer<StateType>;
@@ -49,33 +50,32 @@ const Model: ModelType = {
   },
 
   effects: {
-    * fetch({ payload }, { call, put }) {
-      yield call({ type: 'queryModelFields', payload });
-      yield call({ type: 'queryModelData', payload });
-
-    },
     * add({ payload, callback }, { call, put }) {
       yield call(addModel, payload);
-      yield call('fetch');
       if (callback) callback();
     },
     * remove({ payload, callback }, { call, put }) {
       yield call(removeModel, payload);
-      yield call('fetch');
       if (callback) callback();
     },
     * update({ payload, callback }, { call, put }) {
       yield call(updateModel, payload);
-      yield call('fetch');
       if (callback) callback();
     },
     * queryModelFields({ payload }, { call, put }) {
+
       console.log('[Effects] Query Model Fields: ', payload)
       const response: LfResponse = yield call(queryModelFields, payload);
-      const columns: StandardTableColumnProps[] = response.data.entity.map(field => {
-        field.dataIndex = field.key;
+      // Generate columns from form fields
+      const fields: FilterFormList[] = response.data.entity;
+      const columns: StandardTableColumnProps[] = fields.map(field => {
+        field.dataIndex = field.key as string;
+        field.title = param(field.key as string);
+        field.align = 'left';
+        field.sorter = true;
         return field;
       });
+      // put columns
       yield put({
         type: 'setColumns',
         payload: columns,

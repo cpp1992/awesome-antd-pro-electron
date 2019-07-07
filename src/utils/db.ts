@@ -21,9 +21,9 @@ export const dbInitModule = (pool: any, collections: string[]): { [name: string]
     const adapter = new Memory(collection);
     const dbModule: any = low(adapter);
     dbModule._.mixin(loadashId);
-    if (!dbModule.has(collection).value()) {
-      dbModule.set(collection, []).write();
-    }
+    dbModule.set('name', collection);
+    dbModule.set('data', []).write();
+    dbModule.set('fields', []).write();
     acc[collection] = dbModule;
     return acc;
   }, pool);
@@ -35,20 +35,20 @@ console.log('window pool basic:', pool);
 // init some mock data
 const currentUser = user['GET /api/currentUser'];
 pool.login
-  .get('login')
+  .get('data')
   .insert(currentUser)
   .write();
 
 notices.notices.forEach(notice => {
   pool.notice
-    .get('notice')
+    .get('data')
     .insert(notice)
     .write();
 });
 
 rule.tableListDataSource.forEach(rule => {
   pool.rule
-    .get('rule')
+    .get('data')
     .insert(rule)
     .write();
 });
@@ -63,16 +63,16 @@ MockModels.keys().forEach((fileName: string) => {
 
   const fileNameMeta = tail(fileName.split('/'));
   const modelNameCamel = camelCase(nth(fileNameMeta, -2))
-
-  pool.model.get('model').push({
+  // 将模型列表定义，添加到model数据库中，用于选择模型，动态更新
+  pool.model.get('data').push({
     title: modelNameCamel,
     value: modelNameCamel,
   }).write();
-  pool.model.set(modelNameCamel, MockModels(fileName).fields).write();
-
+  pool = dbInitModule(pool, [modelNameCamel]);
+  // 将字段定义添加到每个数据库中
+  pool[modelNameCamel].set('fields', MockModels(fileName).fields).write();
 })
 
-pool = dbInitModule(pool, pool.model.get('model').value().map(v => v.title));
 console.log('window pool dynamic', pool);
 
 window.pool = pool;

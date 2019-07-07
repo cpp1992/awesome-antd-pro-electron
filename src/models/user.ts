@@ -52,7 +52,7 @@ const UserModel: UserModelType = {
     },
     * fetchCurrent(_, { call, put }) {
       const response: LfResponse = yield call(queryCurrent);
-      const payload = response.data.entity[0];
+      const payload: CurrentUser = response.data.entity[0];
       yield put({
         type: 'saveCurrentUser',
         payload,

@@ -3,7 +3,7 @@ import service from '@/utils/request.local';
 export async function query(): Promise<any> {
   // return request('/api/users');
   return service.request({
-    url: '/api/user/user',
+    url: '/api/user/data',
     method: 'get',
   });
 }
@@ -11,7 +11,7 @@ export async function query(): Promise<any> {
 export async function queryCurrent(): Promise<any> {
   // return request('/api/currentUser');
   return service.request({
-    url: '/api/login/login',
+    url: '/api/login/data',
     method: 'get',
     data: {
       userid: '00000001',
