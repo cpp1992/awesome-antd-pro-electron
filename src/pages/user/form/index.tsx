@@ -44,6 +44,10 @@ class UserForm extends Component<FormProps> {
         value: 'user'
       },
       {
+        title: 'employee',
+        value: 'employee'
+      },
+      {
         title: 'asset',
         value: 'asset'
       },
@@ -53,18 +57,16 @@ class UserForm extends Component<FormProps> {
       }
     ],
     // modelNameOptions: window.pool.model.get('model').value(),
-    defaultItemList,
+    defaultItemList: [],
   }
 
   selectChanged = (name) => {
     const { dispatch } = this.props;
     console.log('Change model: ', name);
-    const fields = window.pool.model.get(name).value()
     dispatch({
-      type: 'userForm/changeModelName',
+      type: 'global/queryModelFields',
       payload: {
         name: name + 'Form',
-        fields
       }
     })
   }

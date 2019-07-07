@@ -10,8 +10,6 @@ import user from '../../mock/user';
 import notices from '../../mock/notices';
 import rule from '../pages/user/table-list/_mock';
 import geographic from '../pages/account/settings/_mock';
-import userModel from '../pages/user/form/_mock';
-import loginModel from '../pages/account/login/_mock';
 
 // const adapter = new FileSync(join(__dirname, "data.json"));
 
@@ -43,14 +41,6 @@ pool.login
   .insert(currentUser)
   .write();
 
-const users = user['GET /api/users'];
-users.forEach(user => {
-  pool.user
-    .get('user')
-    .insert(user)
-    .write();
-});
-
 notices.notices.forEach(notice => {
   pool.notice
     .get('notice')
@@ -69,17 +59,6 @@ pool.geographic.set('province', geographic.province).write();
 pool.geographic.set('city', geographic.city).write();
 
 // 初始化每个对象模型的表单信息
-pool.model.get('model').push({
-  title: 'user',
-  value: 'user',
-}).write();
-pool.model.get('model').push({
-  title: 'login',
-  value: 'login'
-}).write();
-pool.model.set('user', userModel.fields).write();
-pool.model.set('login', loginModel.fields).write();
-
 const MockModels = require.context('./_mocks/json', true, /\.json$/)
 
 MockModels.keys().forEach((fileName: string) => {

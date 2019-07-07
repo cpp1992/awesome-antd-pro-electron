@@ -33,18 +33,13 @@ interface FormProps extends FormComponentProps{
 class MForm extends Component<FormProps> {
 
   componentWillMount() {
-    const { defaultItemList } = this.props;
-    if ( defaultItemList.length === 0) {
-      this.queryModelFields();
-    } else {
-      this.editModelFields();
-    }
+    this.queryModelFields();
   }
 
-  editModelFields() {
+  setDefaultModelFields() {
     const { dispatch, modelName, defaultItemList } = this.props;
     dispatch({
-      type: 'global/editModelFields',
+      type: 'userForm/changeModelName',
       payload: {
         name: modelName,
         fields: defaultItemList
@@ -55,7 +50,7 @@ class MForm extends Component<FormProps> {
   queryModelFields() {
     const { dispatch, modelName } = this.props;
     dispatch({
-      type: 'global/queryModel',
+      type: 'global/queryModelFields',
       payload: {
         name: modelName,
       },

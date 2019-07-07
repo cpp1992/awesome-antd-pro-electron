@@ -4,7 +4,7 @@ import { Subscription } from 'dva';
 import { Effect } from './connect.d';
 import { NoticeIconData } from '@/components/NoticeIcon';
 import { queryNotices } from '@/services/user';
-import { queryModel, editModelFields } from '@/services/model';
+import { queryModel } from '@/services/model';
 import { LfResponse } from '@/interface';
 
 export interface NoticeItem extends NoticeIconData {
@@ -23,8 +23,7 @@ export interface GlobalModelType {
   namespace: 'global';
   state: GlobalModelState;
   effects: {
-    queryModel: Effect;
-    editModelFields: Effect;
+    queryModelFields: Effect;
     fetchNotices: Effect;
     clearNotices: Effect;
     changeNoticeReadState: Effect;
@@ -48,19 +47,9 @@ const GlobalModel: GlobalModelType = {
   },
 
   effects: {
-    * editModelFields({ payload }, { call, put, select }) {
-      console.log('edit model payload: ', payload);
-      const response = yield call(editModelFields, payload);
-      const type = `${payload.name}/changeModelName`;
-      yield put({
-        type,
-        payload: response
-      })
-    },
-    * queryModel({ payload }, { call, put, select }) {
+    * queryModelFields({ payload }, { call, put, select }) {
       console.log('query model payload: ', payload);
-      const name = payload.name.replace('Form', '');
-      const type = `${payload.name}/changeModelName`;
+      const type = `userForm/changeModelName`;
 
       const response: LfResponse = yield call(queryModel, payload);
       const fields = response.data.entity;
@@ -69,7 +58,7 @@ const GlobalModel: GlobalModelType = {
       yield put({
         type,
         payload: {
-          name,
+          name: payload.name,
           fields,
         },
       });

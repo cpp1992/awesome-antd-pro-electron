@@ -40,7 +40,8 @@ const Model: ModelType = {
       yield call(submitForm, payload);
       message.success('提交成功');
     },
-    * changeModelName({ payload }, { put }) {
+    * changeModelName({ payload }, { call, put }) {
+      // global/queryModel
       console.log('Change Model name: ', payload)
       yield put({
         type: 'save',

@@ -18,7 +18,7 @@ export async function queryModel(params: any): Promise<any> {
   });
 }
 
-export async function editModelFields(params: any): Promise<any> {
+export async function mockModel(params: any): Promise<any> {
   // return request('/api/currentUser');
   const { fields } = params;
   const name = params.name.replace('Form', '');
@@ -31,5 +31,4 @@ export async function editModelFields(params: any): Promise<any> {
   }, {})
   window.pool[name].set(name, []).write();
   window.pool[name].get(name).insert(defaultValue).write();
-  return Promise.resolve(params);
 }

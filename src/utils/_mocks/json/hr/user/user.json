@@ -1,0 +1,158 @@
+{
+  "fields": [
+    {
+      "key": "id",
+      "type": "input",
+      "label": "id",
+      "placeholder": "Leave it untouched!"
+    },
+    {
+      "key": "department",
+      "type": "select",
+      "label": "department",
+      "placeholder": "Input department",
+      "options": []
+    },
+    {
+      "key": "name",
+      "type": "input",
+      "label": "name",
+      "placeholder": "Input name"
+    },
+    {
+      "key": "gender",
+      "type": "select",
+      "label": "gender",
+      "placeholder": "Input gender",
+      "options": []
+    },
+    {
+      "key": "birthday",
+      "type": "date",
+      "label": "birthday",
+      "placeholder": "Input birthday"
+    },
+    {
+      "key": "etnia",
+      "type": "select",
+      "label": "etnia",
+      "placeholder": "Input etnia",
+      "options": []
+    },
+    {
+      "key": "academicBackground",
+      "type": "select",
+      "label": "academicBackground",
+      "placeholder": "Input academicBackground",
+      "options": []
+    },
+    {
+      "key": "foreignLanguage",
+      "type": "input",
+      "label": "foreignLanguage",
+      "placeholder": "Input foreignLanguage"
+    },
+    {
+      "key": "politicalRole",
+      "type": "select",
+      "label": "politicalRole",
+      "placeholder": "Input politicalRole",
+      "options": []
+    },
+    {
+      "key": "positionAndRank",
+      "type": "input",
+      "label": "positionAndRank",
+      "placeholder": "Input positionAndRank"
+    },
+    {
+      "key": "militantRole",
+      "type": "input",
+      "label": "militantRole",
+      "placeholder": "Input militantRole",
+      "options": []
+    },
+    {
+      "key": "duty",
+      "type": "input",
+      "label": "duty",
+      "placeholder": "Input duty"
+    },
+    {
+      "key": "fromEntity",
+      "type": "input",
+      "label": "fromEntity",
+      "placeholder": "Input fromEntity"
+    },
+    {
+      "key": "arrivingDate",
+      "type": "date",
+      "label": "arrivingDate",
+      "placeholder": "Input arrivingDate"
+    },
+    {
+      "key": "rotatingDate",
+      "type": "date",
+      "label": "rotatingDate",
+      "placeholder": "Input rotatingDate"
+    },
+    {
+      "key": "sendingEntity",
+      "type": "input",
+      "label": "sendingEntity",
+      "placeholder": "Input sendingEntity"
+    },
+    {
+      "key": "conyugeName",
+      "type": "input",
+      "label": "conyugeName",
+      "placeholder": "Input conyugeName"
+    },
+    {
+      "key": "conyugeEntity",
+      "type": "input",
+      "label": "conyugeEntity",
+      "placeholder": "Input conyugeEntity"
+    },
+    {
+      "key": "conyugeBonus",
+      "type": "input",
+      "label": "conyugeBonus",
+      "placeholder": "Input conyugeBonus"
+    },
+    {
+      "key": "note",
+      "type": "textarea",
+      "label": "note",
+      "placeholder": "Input note"
+    },
+    {
+      "key": "protocolId",
+      "type": "input",
+      "label": "protocolId",
+      "placeholder": "Input protocolId"
+    },
+    {
+      "key": "isActive",
+      "type": "checkboxButton",
+      "label": "isActive",
+      "placeholder": "Input isActive",
+      "options": [
+        {
+          "label": "在馆",
+          "value": "在馆"
+        },
+        {
+          "label": "离馆",
+          "value": "离馆"
+        }
+      ]
+    },
+    {
+      "key": "militant",
+      "type": "input",
+      "label": "string",
+      "placeholder": "Input militant"
+    }
+  ]
+}

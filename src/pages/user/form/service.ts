@@ -1,4 +1,4 @@
-import request from 'umi-request';
+// import request from 'umi-request';
 
 export async function fakeSubmitForm(params: any) {
   // return request('/api/forms', {
@@ -14,8 +14,8 @@ export async function fakeSubmitForm(params: any) {
 }
 
 export async function submitForm(params: any) {
-  console.log('User submit values: ', params);
   const { name, action, data } = params;
+  console.log(`Submit [${name}/${action}] with values: `, data);
   return window.api.request({
     url: `/api/${name}/${action}`,
     method: 'post',
