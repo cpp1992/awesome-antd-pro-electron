@@ -11,8 +11,7 @@ import { connect } from 'dva';
 import { log } from '@/utils';
 
 import MForm from '@/components/MForm';
-
-import styles from './style.less';
+import { defaultItemList } from './config';
 
 interface ModelFormProps {
   userForm: {
@@ -37,8 +36,21 @@ interface FormProps extends FormComponentProps {
 class UserForm extends Component<FormProps> {
   state = {
     modelName: 'userForm',
-    formItemList: [],
+    formItemList: defaultItemList,
   }
+
+  // componentWillMount() {
+  //   const { dispatch, modelName } = this.props;
+  //   const { formItemList } = this.state;
+  //   const name = modelName.replace('Form', '');
+  //   dispatch({
+  //     type: 'global/editModelFields',
+  //     payload: {
+  //       name,
+  //       fields: formItemList
+  //     }
+  //   })
+  // }
 
   render() {
     const {

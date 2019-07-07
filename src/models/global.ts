@@ -4,7 +4,7 @@ import { Subscription } from 'dva';
 import { Effect } from './connect.d';
 import { NoticeIconData } from '@/components/NoticeIcon';
 import { queryNotices } from '@/services/user';
-import { queryModel } from '@/services/model';
+import { queryModel, editModelFields } from '@/services/model';
 import { LfResponse } from '@/interface';
 
 export interface NoticeItem extends NoticeIconData {
@@ -24,12 +24,14 @@ export interface GlobalModelType {
   state: GlobalModelState;
   effects: {
     queryModel: Effect;
+    editModelFields: Effect;
     fetchNotices: Effect;
     clearNotices: Effect;
     changeNoticeReadState: Effect;
   };
   reducers: {
     changeLayoutCollapsed: Reducer<GlobalModelState>;
+    saveModels: Reducer<GlobalModelState>;
     saveNotices: Reducer<GlobalModelState>;
     saveClearedNotices: Reducer<GlobalModelState>;
   };
@@ -46,6 +48,9 @@ const GlobalModel: GlobalModelType = {
   },
 
   effects: {
+    * editModelFields({ payload }, { call, put, select }) {
+      yield call(editModelFields, payload);
+    },
     * queryModel({ payload }, { call, put, select }) {
       const name = payload.name.replace('Form', '');
       const type = `${payload.name}/changeModelName`;
@@ -134,6 +139,12 @@ const GlobalModel: GlobalModelType = {
         notices: payload,
       };
     },
+    saveModels(state, { payload }): GlobalModelState {
+      return {
+        ...state,
+        models: payload,
+      };
+    },
     saveClearedNotices(state = { notices: [], collapsed: true, models: [] }, { payload }): GlobalModelState {
       return {
         collapsed: false,
@@ -144,7 +155,7 @@ const GlobalModel: GlobalModelType = {
   },
 
   subscriptions: {
-    setup({ history }): void {
+    setup({ dispatch, history }): void {
       // Subscribe history(url) change, trigger `load` action if pathname is `/`
       history.listen(({ pathname, search }): void => {
         if (typeof window.ga !== 'undefined') {

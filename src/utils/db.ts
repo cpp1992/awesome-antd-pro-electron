@@ -15,37 +15,27 @@ import loginModel from '../pages/account/login/_mock';
 
 // const adapter = new FileSync(join(__dirname, "data.json"));
 
+
+let pool: any;
+
 const collections = ['user', 'notice', 'login', 'rule', 'geographic', 'model'];
 
-const dbInit = (collections: string[]) => {
-  const adapter = new Memory('antd');
-  const db: any = low(adapter);
-  db._.mixin(loadashId);
-  collections.forEach(collection => {
-    if (!db.has(collection).value()) {
-      db.set(collection, []).write();
-    }
-  });
-  return db;
-};
-
-const dbInitModule = (collections: string[]): { [name: string]: any } => {
-  const pool = {};
-  collections.forEach(collection => {
+export const dbInitModule = (pool: any, collections: string[]): { [name: string]: any } => {
+  return collections.reduce((acc, collection) => {
     const adapter = new Memory(collection);
     const dbModule: any = low(adapter);
     dbModule._.mixin(loadashId);
     if (!dbModule.has(collection).value()) {
       dbModule.set(collection, []).write();
     }
-    pool[collection] = dbModule;
-  });
-  return pool;
+    acc[collection] = dbModule;
+    return acc;
+  }, pool);
 };
 
-const pool = dbInitModule(collections);
+pool = dbInitModule({}, collections);
 
-// init some default data
+// init some mock data
 const currentUser = user['GET /api/currentUser'];
 pool.login
   .get('login')
@@ -83,18 +73,19 @@ pool.model.get('model').push('login').write();
 pool.model.set('user', userModel.fields).write();
 pool.model.set('login', loginModel.fields).write();
 
-// const MockModels = require.context('./json', true, /\.json$/)
+const MockModels = require.context('./_mocks/json', true, /\.json$/)
 
-// MockModels.keys().forEach((fileName: string) => {
-//   const fileNameMeta = tail(fileName.split('/'));
-//   const sectionMeta = {
-//     section: first(fileNameMeta),
-//     modelName: nth(fileNameMeta, -2),
-//     fileName: last(fileNameMeta),
-//     fullPath: fileName,
-//   };
-//   pool.model.set(sectionMeta.modelName, MockModels(fileName).fields).write();
-// })
+MockModels.keys().forEach((fileName: string) => {
+
+  const fileNameMeta = tail(fileName.split('/'));
+  const modelNameCamel = camelCase(nth(fileNameMeta, -2))
+
+  pool.model.get('model').push(modelNameCamel).write();
+  pool.model.set(modelNameCamel, MockModels(fileName).fields).write();
+
+})
+
+pool = dbInitModule(pool, pool.model.get('model').value());
 
 window.pool = pool;
 
