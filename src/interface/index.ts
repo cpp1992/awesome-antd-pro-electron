@@ -43,7 +43,7 @@ export interface ColumnFilterItem {
 export declare type SortOrder = 'ascend' | 'descend';
 
 // column
-export interface tableList {
+export interface tableListColumn {
   /**
    * specify how content is aligned
    * @default 'left'

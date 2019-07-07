@@ -1,14 +1,17 @@
 import { AnyAction, Reducer } from 'redux';
 import { EffectsCommandMap } from 'dva';
 import {
- addRule, queryRule, removeRule, updateRule,
+ addModel, queryModel, removeModel, updateModel, queryModelFields,
 } from './service.local';
 
 import { LfResponse } from '@/interface';
 import { TableListData } from './data.d';
+import { StandardTableColumnProps } from './components/StandardTable';
 
 export interface StateType {
+  modelName: string;
   data: TableListData;
+  columns: StandardTableColumnProps[];
 }
 
 export type Effect = (
@@ -24,68 +27,71 @@ export interface ModelType {
     add: Effect;
     remove: Effect;
     update: Effect;
+    queryModelFields: Effect;
+    queryModelData: Effect;
   };
   reducers: {
     save: Reducer<StateType>;
+    setColumns: Reducer<StateType>;
   };
 }
 
 const Model: ModelType = {
-  namespace: 'listTableList',
+  namespace: 'userTableList',
 
   state: {
+    modelName: 'userTableList',
     data: {
       list: [],
       pagination: {},
     },
+    columns: [],
   },
 
   effects: {
     * fetch({ payload }, { call, put }) {
-      const response: LfResponse = yield call(queryRule, payload);
-      const list = response.data.entity;
-      yield put({
-        type: 'save',
-        payload: {
-          list: list.length ? list : [list],
-        },
-      });
+      yield call({ type: 'queryModelFields', payload });
+      yield call({ type: 'queryModelData', payload });
+
     },
     * add({ payload, callback }, { call, put }) {
-      yield call(addRule, payload);
-      const response: LfResponse = yield call(queryRule);
-      const list = response.data.entity;
-      yield put({
-        type: 'save',
-        payload: {
-          list: list.length ? list : [list],
-        },
-      });
+      yield call(addModel, payload);
+      yield call('fetch');
       if (callback) callback();
     },
     * remove({ payload, callback }, { call, put }) {
-      yield call(removeRule, payload);
-      const response: LfResponse = yield call(queryRule);
-      const list = response.data.entity;
-      yield put({
-        type: 'save',
-        payload: {
-          list: list.length ? list : [list],
-        },
-      });
+      yield call(removeModel, payload);
+      yield call('fetch');
       if (callback) callback();
     },
     * update({ payload, callback }, { call, put }) {
-      yield call(updateRule, payload);
-      const response: LfResponse = yield call(queryRule);
-      const list = response.data.entity;
+      yield call(updateModel, payload);
+      yield call('fetch');
+      if (callback) callback();
+    },
+    * queryModelFields({ payload }, { call, put }) {
+      console.log('[Effects] Query Model Fields: ', payload)
+      const response: LfResponse = yield call(queryModelFields, payload);
+      const columns: StandardTableColumnProps[] = response.data.entity.map(field => {
+        field.dataIndex = field.key;
+        return field;
+      });
+      yield put({
+        type: 'setColumns',
+        payload: columns,
+      });
+    },
+    * queryModelData({ payload }, { call, put }) {
+      console.log('[Effects] Query Model Data: ', payload)
+      const response: LfResponse = yield call(queryModel, payload);
+      const list: TableListData['list'] = response.data.entity;
+
       yield put({
         type: 'save',
         payload: {
           list: list.length ? list : [list],
         },
       });
-      if (callback) callback();
     },
   },
 
@@ -94,6 +100,12 @@ const Model: ModelType = {
       return {
         ...state,
         data: action.payload,
+      };
+    },
+    setColumns(state, action) {
+      return {
+        ...state,
+        columns: action.payload,
       };
     },
   },

@@ -14,6 +14,8 @@ export const log = {
   },
 };
 
+export const delay = (timeout: number) => new Promise(resolve => setTimeout(resolve, timeout));
+
 // String Helpers
 export const capitalizeFirstLetter = (message: string) => message.charAt(0).toUpperCase() + message.slice(1).toLowerCase();
 

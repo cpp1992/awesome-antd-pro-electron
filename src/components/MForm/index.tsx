@@ -16,6 +16,7 @@ import React, { Component } from 'react';
 import { param } from 'change-case';
 import { Dispatch } from 'redux';
 import { FormComponentProps } from 'antd/es/form';
+import { convertDate } from '@/utils/datetime';
 
 const FormItem = Form.Item;
 const { Option } = Select;
@@ -42,32 +43,25 @@ class MForm extends Component<FormProps> {
       type: 'userForm/changeModelName',
       payload: {
         name: modelName,
-        fields: defaultItemList
-      }
-    })
-  }
-
-  queryModelFields() {
-    const { dispatch, modelName } = this.props;
-    dispatch({
-      type: 'global/queryModelFields',
-      payload: {
-        name: modelName,
+        fields: defaultItemList,
       },
     })
   }
 
   handleSubmit = (e: React.FormEvent) => {
-    const { form, dispatch, modelName } = this.props;
-    const name = modelName.replace('Form','');
-    const type = `userForm/submitForm`;
+    const {
+ form, dispatch, modelName, formItemList,
+} = this.props;
+    const name = modelName.replace('Form', '');
+    const type = 'userForm/submitForm';
     e.preventDefault();
     form.validateFieldsAndScroll((err, values) => {
       if (!err) {
+        const data = convertDate(formItemList, values);
         const payload = {
           name,
           action: name,
-          data: values
+          data,
         }
         Modal.info({
           title: JSON.stringify(payload),
@@ -79,6 +73,16 @@ class MForm extends Component<FormProps> {
       }
     });
   };
+
+  queryModelFields() {
+    const { dispatch, modelName } = this.props;
+    dispatch({
+      type: 'userForm/queryModelFields',
+      payload: {
+        name: modelName,
+      },
+    })
+  }
 
   renderFormItem(item) {
     const {
@@ -100,7 +104,7 @@ class MForm extends Component<FormProps> {
 
     let itemDom = null;
 
-    const { key, type } = item;
+    const { key, type, options } = item;
     const label = `${param(modelName)}.${key}.label`
     // const placeholderX = `${param(modelName)}.${key}.placeholder`
     const placeholderX = `${param(modelName)}.${key}.label`
@@ -108,12 +112,29 @@ class MForm extends Component<FormProps> {
     switch (type) {
       case 'input':
         itemDom = <FormItem {...formItemLayout} key={key} label={<FormattedMessage id={label} />}>
-              {getFieldDecorator(String(key), {})(<Input placeholder={'请输入' + formatMessage({ id: placeholderX })} />)}
+              {getFieldDecorator(String(key), {})(<Input />)}
+            </FormItem>
+        break;
+      case 'textarea':
+        itemDom = <FormItem {...formItemLayout} key={key} label={<FormattedMessage id={label} />}>
+              {getFieldDecorator(String(key), {})(<TextArea rows={4} placeholder="请输入" />)}
+            </FormItem>
+        break;
+      case 'select':
+        itemDom = <FormItem {...formItemLayout} key={key} label={<FormattedMessage id={label} />}>
+              {getFieldDecorator(String(key), {})(<Select showSearch labelInValue>
+                {options.map(option => <Option key={option.label} value={option.value}>{option.label}</Option>)}
+              </Select>)}
+            </FormItem>
+        break;
+      case 'date':
+        itemDom = <FormItem {...formItemLayout} key={key} label={<FormattedMessage id={label} />}>
+              {getFieldDecorator(String(key), {})(<DatePicker style={{ width: '100%' }} />)}
             </FormItem>
         break;
       default:
         itemDom = <FormItem {...formItemLayout} key={key} label={<FormattedMessage id={label} />}>
-              {getFieldDecorator(String(key), {})(<Input placeholder={'请输入' + formatMessage({ id: placeholderX })}/>)}
+              {getFieldDecorator(String(key), {})(<Input placeholder={`请输入${formatMessage({ id: placeholderX })}`}/>)}
             </FormItem>
         break;
     }

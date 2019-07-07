@@ -11,7 +11,6 @@ import { connect } from 'dva';
 import { log } from '@/utils';
 
 import MForm from '@/components/MForm';
-import { defaultItemList } from './config';
 
 const Option = Select.Option;
 
@@ -41,20 +40,20 @@ class UserForm extends Component<FormProps> {
     modelNameOptions: [
       {
         title: 'user',
-        value: 'user'
+        value: 'user',
       },
       {
         title: 'employee',
-        value: 'employee'
+        value: 'employee',
       },
       {
         title: 'asset',
-        value: 'asset'
+        value: 'asset',
       },
       {
         title: 'bank',
-        value: 'bank'
-      }
+        value: 'bank',
+      },
     ],
     // modelNameOptions: window.pool.model.get('model').value(),
     defaultItemList: [],
@@ -64,17 +63,17 @@ class UserForm extends Component<FormProps> {
     const { dispatch } = this.props;
     console.log('Change model: ', name);
     dispatch({
-      type: 'global/queryModelFields',
+      type: 'userForm/queryModelFields',
       payload: {
-        name: name + 'Form',
-      }
+        name: `${name}Form`,
+      },
     })
   }
 
   renderTitle() {
     const { modelNameOptions } = this.state;
     return (
-      <Select showSearch defaultValue={'user'} style={{ width: 100, maxWidth: 220 }} onSelect={this.selectChanged}>
+      <Select showSearch defaultValue="user" style={{ width: 100, maxWidth: 220 }} onSelect={this.selectChanged}>
       {modelNameOptions.map(item => (
         <Option key={item.title} value={item.value}>
           {item.title}

@@ -1,45 +1,67 @@
 import Table from 'antd/es/table';
 import { TableListParams } from './data';
 
-export async function queryRule(params: TableListParams) {
-  console.log('query: ', params);
-  if (params !== undefined) {
-    return window.api.request({
-      url: '/api/rule/rule',
-      method: 'get',
-      data: params.data,
-      params: params.pagination,
-    });
-  }
+export async function queryModelFields(params: any): Promise<any> {
+  const name = params.name.replace('TableList', '');
+  console.log('[Service] Query Model: ', params);
+  const url = `/api/model/${name}`
   return window.api.request({
-    url: '/api/rule/rule',
+    url,
     method: 'get',
   });
 }
 
-export async function removeRule(params: TableListParams) {
+export async function queryModel(params: any) {
+  const {
+ name, action, data, pagination,
+} = params;
+  console.log('query: ', params);
+  if (data !== undefined) {
+    return window.api.request({
+      url: `/api/${name}/${action}`,
+      method: 'get',
+      data,
+      params: pagination,
+    });
+  }
+  return window.api.request({
+    url: `/api/${name}/${action}`,
+    method: 'get',
+  });
+}
+
+export async function removeModel(params: any) {
+  const {
+ name, action, data, pagination,
+} = params;
   console.log('remove: ', params);
   return window.api.request({
-    url: '/api/rule/rule',
+    url: `/api/${name}/${action}`,
     method: 'delete',
-    data: params.data,
+    data,
   });
 }
 
-export async function addRule(params: TableListParams) {
+export async function addModel(params: any) {
+  const {
+ name, action, data, pagination,
+} = params;
   console.log('add: ', params);
   return window.api.request({
-    url: '/api/rule/rule',
+    url: `/api/${name}/${action}`,
     method: 'post',
-    data: params.data,
+    data,
   });
 }
 
-export async function updateRule(params: TableListParams) {
+export async function updateModel(params: any) {
+  const {
+ name, action, data, pagination,
+} = params;
   console.log('update: ', params);
   return window.api.request({
-    url: '/api/rule/rule',
+    url: `/api/${name}/${action}`,
     method: 'patch',
-    data: params.data,
+    data,
   });
 }

@@ -36,6 +36,7 @@ module.exports = {
     camelcase: 'off',
     experimentalDecorators: 'off',
     radix: 'off',
+    'padded-blocks': 'off',
     'global-require': 'off',
     'class-methods-use-this': 'off',
     'linebreak-style': 'off',
@@ -52,6 +53,7 @@ module.exports = {
     'eslint-import-resolver-typescript': {
       extensions: ['.ts', '.tsx', '.d.ts'],
     },
+    'import/no-mutable-exports': 'off',
     'import/prefer-default-export': 'off',
     'import/no-dynamic-require': 'off',
     'import/no-named-as-default-member': 'off',

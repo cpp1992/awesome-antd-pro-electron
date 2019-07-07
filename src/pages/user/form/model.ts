@@ -1,7 +1,8 @@
 import { AnyAction, Reducer } from 'redux';
 import { EffectsCommandMap } from 'dva';
 import { message } from 'antd';
-import { fakeSubmitForm, submitForm } from './service';
+import { fakeSubmitForm, submitForm, queryModelFields } from './service';
+import { LfResponse } from '@/interface';
 
 export type Effect = (
   action: AnyAction,
@@ -15,8 +16,9 @@ export interface ModelType {
     modelFields: any[];
   };
   effects: {
-    submitRegularForm: Effect;
+    fakeSubmitForm: Effect;
     submitForm: Effect;
+    queryModelFields: Effect;
     changeModelName: Effect;
   };
   reducers: {
@@ -32,7 +34,7 @@ const Model: ModelType = {
   },
 
   effects: {
-    * submitRegularForm({ payload }, { call }) {
+    * fakeSubmitForm({ payload }, { call }) {
       yield call(fakeSubmitForm, payload);
       message.success('提交成功');
     },
@@ -40,9 +42,21 @@ const Model: ModelType = {
       yield call(submitForm, payload);
       message.success('提交成功');
     },
+    * queryModelFields({ payload }, { call, put }) {
+      console.log('[Effects] Query Model payload: ', payload)
+      const response: LfResponse = yield call(queryModelFields, payload);
+      const fields = response.data.entity;
+      yield put({
+        type: 'save',
+        payload: {
+          name: payload.name,
+          fields,
+        },
+      });
+    },
     * changeModelName({ payload }, { call, put }) {
-      // global/queryModel
-      console.log('Change Model name: ', payload)
+      // Called from global/queryModelFields
+      console.log('[Effects] Change Model payload: ', payload)
       yield put({
         type: 'save',
         payload,
@@ -52,7 +66,7 @@ const Model: ModelType = {
 
   reducers: {
     save(state, { payload }) {
-      console.log('Save Model name: ', payload)
+      console.log('[Reducer] Save Model: ', payload)
       return {
         ...state,
         modelName: payload.name,

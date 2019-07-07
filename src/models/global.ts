@@ -4,7 +4,7 @@ import { Subscription } from 'dva';
 import { Effect } from './connect.d';
 import { NoticeIconData } from '@/components/NoticeIcon';
 import { queryNotices } from '@/services/user';
-import { queryModel } from '@/services/model';
+import { queryModelFields } from '@/services/model';
 import { LfResponse } from '@/interface';
 
 export interface NoticeItem extends NoticeIconData {
@@ -48,14 +48,17 @@ const GlobalModel: GlobalModelType = {
 
   effects: {
     * queryModelFields({ payload }, { call, put, select }) {
-      console.log('query model payload: ', payload);
-      const type = `userForm/changeModelName`;
+      console.log('[Effects] Query model payload: ', payload);
+      // With effects
+      const type = 'userForm/changeModelName';
+      // Without effects
+      // const type = `userForm/save`;
 
-      const response: LfResponse = yield call(queryModel, payload);
+      const response: LfResponse = yield call(queryModelFields, payload);
       const fields = response.data.entity;
 
-      // put to userForm model
-      yield put({
+      // call/put to userForm model
+      yield call({
         type,
         payload: {
           name: payload.name,

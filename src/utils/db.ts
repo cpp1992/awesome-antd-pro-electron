@@ -13,13 +13,11 @@ import geographic from '../pages/account/settings/_mock';
 
 // const adapter = new FileSync(join(__dirname, "data.json"));
 
-
 let pool: any;
 
 const collections = ['user', 'notice', 'login', 'rule', 'geographic', 'model'];
 
-export const dbInitModule = (pool: any, collections: string[]): { [name: string]: any } => {
-  return collections.reduce((acc, collection) => {
+export const dbInitModule = (pool: any, collections: string[]): { [name: string]: any } => collections.reduce((acc, collection) => {
     const adapter = new Memory(collection);
     const dbModule: any = low(adapter);
     dbModule._.mixin(loadashId);
@@ -29,7 +27,7 @@ export const dbInitModule = (pool: any, collections: string[]): { [name: string]
     acc[collection] = dbModule;
     return acc;
   }, pool);
-};
+
 
 pool = dbInitModule({}, collections);
 console.log('window pool basic:', pool);
