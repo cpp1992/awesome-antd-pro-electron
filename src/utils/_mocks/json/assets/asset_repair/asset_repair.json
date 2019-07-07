@@ -15,13 +15,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "itemCode",
       "label": "Item Code",
       "type": "input",
@@ -33,13 +26,6 @@
       "label": "Item Name",
       "type": "input",
       "placeholder": "Input Item Name",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -61,13 +47,6 @@
       "label": "Assign To Name",
       "type": "input",
       "placeholder": "Input Assign To Name",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -94,24 +73,10 @@
       ]
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "errorDescription",
       "label": "Error Description",
       "type": "input",
       "placeholder": "Input Error Description",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -122,24 +87,10 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "downtime",
       "label": "Downtime",
       "type": "input",
       "placeholder": "Input Downtime",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

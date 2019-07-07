@@ -31,13 +31,6 @@
       ]
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "postingDate",
       "label": "Posting Date",
       "type": "input",
@@ -91,13 +84,6 @@
       "label": "Party Name",
       "type": "input",
       "placeholder": "Input Party Name",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -157,13 +143,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "accountPaidTo",
       "label": "Account Paid To",
       "type": "select",
@@ -210,13 +189,6 @@
       "label": "Paid Amount Company Currency",
       "type": "select",
       "placeholder": "Input Paid Amount Company Currency",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -290,13 +262,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "unallocatedAmount",
       "label": "Unallocated Amount",
       "type": "input",
@@ -346,13 +311,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "chequeReferenceDate",
       "label": "Cheque Reference Date",
       "type": "input",
@@ -385,13 +343,6 @@
       "label": "Remarks",
       "type": "input",
       "placeholder": "Input Remarks",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

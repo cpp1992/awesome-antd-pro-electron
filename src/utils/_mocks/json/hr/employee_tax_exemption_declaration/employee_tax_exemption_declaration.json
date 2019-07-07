@@ -15,13 +15,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "payrollPeriod",
       "label": "Payroll Period",
       "type": "select",
@@ -47,13 +40,6 @@
       "label": "Amended From",
       "type": "select",
       "placeholder": "Input Amended From",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

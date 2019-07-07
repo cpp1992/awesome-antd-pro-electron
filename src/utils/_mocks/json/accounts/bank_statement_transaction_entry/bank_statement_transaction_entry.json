@@ -29,13 +29,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "bank",
       "label": "Bank",
       "type": "select",
@@ -78,13 +71,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "matchTransactionToInvoices",
       "label": "Match Transaction To Invoices",
       "type": "input",
@@ -92,24 +78,10 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "createNewPaymentJournalEntry",
       "label": "Create New Payment Journal Entry",
       "type": "input",
       "placeholder": "Input Create New Payment Journal Entry",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

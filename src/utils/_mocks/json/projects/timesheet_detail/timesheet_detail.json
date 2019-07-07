@@ -15,13 +15,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "expectedHrs",
       "label": "Expected Hrs",
       "type": "input",
@@ -50,13 +43,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "completedQty",
       "label": "Completed Qty",
       "type": "input",
@@ -68,13 +54,6 @@
       "label": "Workstation",
       "type": "select",
       "placeholder": "Input Workstation",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -92,24 +71,10 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "project",
       "label": "Project",
       "type": "select",
       "placeholder": "Input Project",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -120,13 +85,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "bill",
       "label": "Bill",
       "type": "input",
@@ -134,24 +92,10 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "billingHours",
       "label": "Billing Hours",
       "type": "input",
       "placeholder": "Input Billing Hours",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -166,13 +110,6 @@
       "label": "Billing Amount",
       "type": "input",
       "placeholder": "Input Billing Amount",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

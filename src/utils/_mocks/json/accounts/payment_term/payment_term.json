@@ -22,13 +22,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "dueDateBasedOn",
       "label": "Due Date Based On",
       "type": "select",
@@ -56,13 +49,6 @@
       "label": "Credit Months",
       "type": "input",
       "placeholder": "Input Credit Months",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

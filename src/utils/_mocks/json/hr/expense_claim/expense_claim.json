@@ -29,13 +29,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "expenseApprover",
       "label": "Expense Approver",
       "type": "select",
@@ -80,13 +73,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "expenses",
       "label": "Expenses",
       "type": "select",
@@ -126,13 +112,6 @@
       "label": "Task",
       "type": "select",
       "placeholder": "Input Task",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -182,13 +161,6 @@
       "label": "Mode Of Payment",
       "type": "select",
       "placeholder": "Input Mode Of Payment",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

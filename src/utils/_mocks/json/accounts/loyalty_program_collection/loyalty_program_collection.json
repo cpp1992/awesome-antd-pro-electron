@@ -15,13 +15,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "collectionFactor_1Lp",
       "label": "Collection Factor 1 Lp",
       "type": "input",

@@ -15,13 +15,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "paymentAccount",
       "label": "Payment Account",
       "type": "select",
@@ -33,13 +26,6 @@
       "label": "Currency",
       "type": "input",
       "placeholder": "Input Currency",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

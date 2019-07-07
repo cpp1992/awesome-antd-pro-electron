@@ -8,13 +8,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "financeBookDetail",
       "label": "Finance Book Detail",
       "type": "input",

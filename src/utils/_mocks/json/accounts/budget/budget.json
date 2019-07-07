@@ -45,13 +45,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "monthlyDistribution",
       "label": "Monthly Distribution",
       "type": "select",
@@ -120,13 +113,6 @@
       ]
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "applicableOnPurchaseOrder",
       "label": "Applicable On Purchase Order",
       "type": "input",
@@ -174,13 +160,6 @@
       ]
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "applicableOnBookingActualExpenses",
       "label": "Applicable On Booking Actual Expenses",
       "type": "input",
@@ -226,13 +205,6 @@
           "value": "Ignore"
         }
       ]
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
     },
     {
       "key": "budgetAccounts",

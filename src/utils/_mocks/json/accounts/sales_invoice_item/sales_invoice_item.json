@@ -15,13 +15,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "itemName",
       "label": "Item Name",
       "type": "input",
@@ -50,13 +43,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "imageView",
       "label": "Image View",
       "type": "select",
@@ -71,13 +57,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "quantity",
       "label": "Quantity",
       "type": "input",
@@ -89,13 +68,6 @@
       "label": "Stock Uom",
       "type": "select",
       "placeholder": "Input Stock Uom",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -117,13 +89,6 @@
       "label": "Qty As Per Stock Uom",
       "type": "input",
       "placeholder": "Input Qty As Per Stock Uom",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -178,13 +143,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "discountOnPriceListRateWithMargin",
       "label": "Discount On Price List Rate With Margin",
       "type": "input",
@@ -206,13 +164,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "rate",
       "label": "Rate",
       "type": "select",
@@ -224,13 +175,6 @@
       "label": "Amount",
       "type": "select",
       "placeholder": "Input Amount",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -255,13 +199,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "netRate",
       "label": "Net Rate",
       "type": "select",
@@ -273,13 +210,6 @@
       "label": "Net Amount",
       "type": "select",
       "placeholder": "Input Net Amount",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -332,13 +262,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "itemTaxTemplate",
       "label": "Item Tax Template",
       "type": "select",
@@ -381,13 +304,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "serviceStartDate",
       "label": "Service Start Date",
       "type": "input",
@@ -420,13 +336,6 @@
       "label": "Total Weight",
       "type": "input",
       "placeholder": "Input Total Weight",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -469,13 +378,6 @@
       "label": "Batch No",
       "type": "select",
       "placeholder": "Input Batch No",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -549,13 +451,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "deliveryNote",
       "label": "Delivery Note",
       "type": "select",
@@ -588,13 +483,6 @@
       "label": "Asset",
       "type": "select",
       "placeholder": "Input Asset",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

@@ -8,13 +8,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "employeeName",
       "label": "Employee Name",
       "type": "input",
@@ -29,13 +22,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "hours",
       "label": "Hours",
       "type": "input",
@@ -47,13 +33,6 @@
       "label": "Grade",
       "type": "input",
       "placeholder": "Input Grade",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

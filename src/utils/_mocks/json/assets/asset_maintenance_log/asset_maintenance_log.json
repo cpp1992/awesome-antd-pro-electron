@@ -22,13 +22,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "itemCode",
       "label": "Item Code",
       "type": "input",
@@ -40,13 +33,6 @@
       "label": "Item Name",
       "type": "input",
       "placeholder": "Input Item Name",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -75,13 +61,6 @@
       "label": "Assign To",
       "type": "input",
       "placeholder": "Input Assign To",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -119,13 +98,6 @@
       ]
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "hasCertificate",
       "label": "Has Certificate",
       "type": "input",
@@ -140,24 +112,10 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "description",
       "label": "Description",
       "type": "input",
       "placeholder": "Input Description",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

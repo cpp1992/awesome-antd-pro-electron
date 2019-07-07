@@ -1,13 +1,6 @@
 {
   "fields": [
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "costCenterName",
       "label": "Cost Center Name",
       "type": "input",
@@ -33,13 +26,6 @@
       "label": "Company",
       "type": "select",
       "placeholder": "Input Company",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

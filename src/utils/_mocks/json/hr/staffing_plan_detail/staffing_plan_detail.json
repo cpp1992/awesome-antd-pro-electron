@@ -22,13 +22,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "currentCount",
       "label": "Current Count",
       "type": "input",

@@ -49,9 +49,16 @@ const GlobalModel: GlobalModelType = {
 
   effects: {
     * editModelFields({ payload }, { call, put, select }) {
-      yield call(editModelFields, payload);
+      console.log('edit model payload: ', payload);
+      const response = yield call(editModelFields, payload);
+      const type = `${payload.name}/changeModelName`;
+      yield put({
+        type,
+        payload: response
+      })
     },
     * queryModel({ payload }, { call, put, select }) {
+      console.log('query model payload: ', payload);
       const name = payload.name.replace('Form', '');
       const type = `${payload.name}/changeModelName`;
 

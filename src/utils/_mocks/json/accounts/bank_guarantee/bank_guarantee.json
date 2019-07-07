@@ -52,13 +52,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "amount",
       "label": "Amount",
       "type": "input",
@@ -122,13 +115,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "iban",
       "label": "Iban",
       "type": "input",
@@ -147,13 +133,6 @@
       "label": "Swift Number",
       "type": "input",
       "placeholder": "Input Swift Number",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -182,13 +161,6 @@
       "label": "Name Of Beneficiary",
       "type": "input",
       "placeholder": "Input Name Of Beneficiary",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

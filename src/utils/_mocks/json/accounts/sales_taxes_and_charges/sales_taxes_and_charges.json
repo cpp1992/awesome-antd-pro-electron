@@ -50,13 +50,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "description",
       "label": "Description",
       "type": "input",
@@ -71,24 +64,10 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "rate",
       "label": "Rate",
       "type": "input",
       "placeholder": "Input Rate",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -110,13 +89,6 @@
       "label": "Tax Amount After Discount Amount",
       "type": "select",
       "placeholder": "Input Tax Amount After Discount Amount",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

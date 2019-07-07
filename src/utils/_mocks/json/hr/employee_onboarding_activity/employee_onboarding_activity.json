@@ -22,13 +22,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "completed",
       "label": "Completed",
       "type": "input",
@@ -40,13 +33,6 @@
       "label": "Required For Employee Creation",
       "type": "input",
       "placeholder": "Input Required For Employee Creation",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

@@ -22,13 +22,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "partyType",
       "label": "Party Type",
       "type": "select",
@@ -49,13 +42,6 @@
       "label": "Party",
       "type": "select",
       "placeholder": "Input Party",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -89,13 +75,6 @@
       "label": "Outstanding Amount",
       "type": "input",
       "placeholder": "Input Outstanding Amount",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

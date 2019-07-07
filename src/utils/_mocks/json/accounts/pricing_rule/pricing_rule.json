@@ -1,13 +1,6 @@
 {
   "fields": [
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "title",
       "label": "Title",
       "type": "input",
@@ -53,13 +46,6 @@
       "label": "Item Group",
       "type": "select",
       "placeholder": "Input Item Group",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -158,13 +144,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "selling",
       "label": "Selling",
       "type": "input",
@@ -176,13 +155,6 @@
       "label": "Buying",
       "type": "input",
       "placeholder": "Input Buying",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -271,13 +243,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "minQty",
       "label": "Min Qty",
       "type": "input",
@@ -285,24 +250,10 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "maxQty",
       "label": "Max Qty",
       "type": "input",
       "placeholder": "Input Max Qty",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -317,13 +268,6 @@
       "label": "Valid Upto",
       "type": "input",
       "placeholder": "Input Valid Upto",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -364,24 +308,10 @@
       ]
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "marginRateOrAmount",
       "label": "Margin Rate Or Amount",
       "type": "input",
       "placeholder": "Input Margin Rate Or Amount",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -399,13 +329,6 @@
           "value": "Discount Percentage"
         }
       ]
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
     },
     {
       "key": "rate",

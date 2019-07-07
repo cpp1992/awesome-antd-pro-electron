@@ -15,13 +15,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "shippingRuleType",
       "label": "Shipping Rule Type",
       "type": "select",
@@ -48,13 +41,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "shippingAccount",
       "label": "Shipping Account",
       "type": "select",
@@ -66,13 +52,6 @@
       "label": "Cost Center",
       "type": "select",
       "placeholder": "Input Cost Center",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -90,13 +69,6 @@
           "value": "Net Weight"
         }
       ]
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
     },
     {
       "key": "shippingAmount",

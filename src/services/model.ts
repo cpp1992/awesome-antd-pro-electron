@@ -9,7 +9,7 @@ export async function query(): Promise<any> {
 
 export async function queryModel(params: any): Promise<any> {
   // return request('/api/currentUser');
-  const name = params.name;
+  const name = params.name.replace('Form', '');
   console.log('Query Model Service: ', name);
   const url = `/api/model/${name}`
   return lfService.request({
@@ -20,6 +20,16 @@ export async function queryModel(params: any): Promise<any> {
 
 export async function editModelFields(params: any): Promise<any> {
   // return request('/api/currentUser');
-  window.pool[params.name].get[params.name].set(params.fields).write();
+  const { fields } = params;
+  const name = params.name.replace('Form', '');
+  console.log('Edit Model Service: ', name);
+  const defaultValue = fields.reduce((acc, field) => {
+    if (field.key !== 'id') {
+      acc[field.key] = field.placeholder
+    }
+    return acc
+  }, {})
+  window.pool[name].set(name, []).write();
+  window.pool[name].get(name).insert(defaultValue).write();
   return Promise.resolve(params);
 }

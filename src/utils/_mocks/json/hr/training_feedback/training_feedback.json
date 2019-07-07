@@ -29,13 +29,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "trainingEvent",
       "label": "Training Event",
       "type": "select",
@@ -54,13 +47,6 @@
       "label": "Trainer Name",
       "type": "input",
       "placeholder": "Input Trainer Name",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

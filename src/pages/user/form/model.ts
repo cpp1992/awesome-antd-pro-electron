@@ -1,7 +1,7 @@
 import { AnyAction, Reducer } from 'redux';
 import { EffectsCommandMap } from 'dva';
 import { message } from 'antd';
-import { fakeSubmitForm } from './service';
+import { fakeSubmitForm, submitForm } from './service';
 
 export type Effect = (
   action: AnyAction,
@@ -37,7 +37,7 @@ const Model: ModelType = {
       message.success('提交成功');
     },
     * submitForm({ payload }, { call }) {
-      yield call(fakeSubmitForm, payload);
+      yield call(submitForm, payload);
       message.success('提交成功');
     },
     * changeModelName({ payload }, { put }) {

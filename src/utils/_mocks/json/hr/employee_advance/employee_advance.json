@@ -22,13 +22,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "postingDate",
       "label": "Posting Date",
       "type": "input",
@@ -43,24 +36,10 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "purpose",
       "label": "Purpose",
       "type": "input",
       "placeholder": "Input Purpose",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -89,13 +68,6 @@
       "label": "Claimed Amount",
       "type": "select",
       "placeholder": "Input Claimed Amount",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -134,13 +106,6 @@
       "label": "Amended From",
       "type": "select",
       "placeholder": "Input Amended From",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

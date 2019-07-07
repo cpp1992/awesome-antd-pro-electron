@@ -29,13 +29,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "partyType",
       "label": "Party Type",
       "type": "select",
@@ -71,13 +64,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "exchangeRate",
       "label": "Exchange Rate",
       "type": "input",
@@ -103,13 +89,6 @@
       "label": "Debit In Company Currency",
       "type": "select",
       "placeholder": "Input Debit In Company Currency",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -204,13 +183,6 @@
       "label": "Project",
       "type": "select",
       "placeholder": "Input Project",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

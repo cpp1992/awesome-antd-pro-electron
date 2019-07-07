@@ -34,13 +34,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "customerGroup",
       "label": "Customer Group",
       "type": "select",
@@ -94,13 +87,6 @@
       "label": "Expiry Duration In Days",
       "type": "input",
       "placeholder": "Input Expiry Duration In Days",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

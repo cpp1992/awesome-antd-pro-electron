@@ -13,6 +13,7 @@ import {
 import { FormattedMessage, formatMessage } from 'umi-plugin-react/locale';
 import React, { Component } from 'react';
 
+import { param } from 'change-case';
 import { Dispatch } from 'redux';
 import { FormComponentProps } from 'antd/es/form';
 
@@ -25,11 +26,33 @@ interface FormProps extends FormComponentProps{
   modelName: string;
   submitting: boolean;
   formItemList: any[];
+  defaultItemList: any[];
   dispatch: Dispatch<any>;
 }
 
 class MForm extends Component<FormProps> {
+
   componentWillMount() {
+    const { defaultItemList } = this.props;
+    if ( defaultItemList.length === 0) {
+      this.queryModelFields();
+    } else {
+      this.editModelFields();
+    }
+  }
+
+  editModelFields() {
+    const { dispatch, modelName, defaultItemList } = this.props;
+    dispatch({
+      type: 'global/editModelFields',
+      payload: {
+        name: modelName,
+        fields: defaultItemList
+      }
+    })
+  }
+
+  queryModelFields() {
     const { dispatch, modelName } = this.props;
     dispatch({
       type: 'global/queryModel',
@@ -41,16 +64,22 @@ class MForm extends Component<FormProps> {
 
   handleSubmit = (e: React.FormEvent) => {
     const { form, dispatch, modelName } = this.props;
-    const type = `${modelName}Form/submitForm`;
+    const name = modelName.replace('Form','');
+    const type = `userForm/submitForm`;
     e.preventDefault();
     form.validateFieldsAndScroll((err, values) => {
       if (!err) {
+        const payload = {
+          name,
+          action: name,
+          data: values
+        }
         Modal.info({
-          title: JSON.stringify(values),
+          title: JSON.stringify(payload),
         })
         dispatch({
           type,
-          payload: values,
+          payload,
         });
       }
     });
@@ -58,7 +87,8 @@ class MForm extends Component<FormProps> {
 
   renderFormItem(item) {
     const {
-      form: { getFieldDecorator, getFieldValue },
+      modelName,
+      form: { getFieldDecorator },
     } = this.props;
 
     const formItemLayout = {
@@ -76,18 +106,19 @@ class MForm extends Component<FormProps> {
     let itemDom = null;
 
     const { key, type } = item;
-    const label = `user-form.${key}.label`
-    const placeholderX = `user-form.${key}.placeholder`
+    const label = `${param(modelName)}.${key}.label`
+    // const placeholderX = `${param(modelName)}.${key}.placeholder`
+    const placeholderX = `${param(modelName)}.${key}.label`
 
     switch (type) {
       case 'input':
         itemDom = <FormItem {...formItemLayout} key={key} label={<FormattedMessage id={label} />}>
-              {getFieldDecorator(String(key), {})(<Input placeholder={formatMessage({ id: placeholderX })} />)}
+              {getFieldDecorator(String(key), {})(<Input placeholder={'请输入' + formatMessage({ id: placeholderX })} />)}
             </FormItem>
         break;
       default:
-        itemDom = <FormItem {...formItemLayout} label={<FormattedMessage id={label} />}>
-              {getFieldDecorator(String(key), {})(<Input placeholder={formatMessage({ id: placeholderX })}/>)}
+        itemDom = <FormItem {...formItemLayout} key={key} label={<FormattedMessage id={label} />}>
+              {getFieldDecorator(String(key), {})(<Input placeholder={'请输入' + formatMessage({ id: placeholderX })}/>)}
             </FormItem>
         break;
     }

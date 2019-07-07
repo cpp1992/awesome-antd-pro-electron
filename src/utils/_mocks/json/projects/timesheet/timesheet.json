@@ -29,13 +29,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "salarySlip",
       "label": "Salary Slip",
       "type": "select",
@@ -99,13 +92,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "user",
       "label": "User",
       "type": "select",
@@ -127,24 +113,10 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "timeSheets",
       "label": "Time Sheets",
       "type": "select",
       "placeholder": "Input Time Sheets",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -183,13 +155,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "totalBillableAmount",
       "label": "Total Billable Amount",
       "type": "input",
@@ -208,13 +173,6 @@
       "label": "Amount Billed",
       "type": "input",
       "placeholder": "Input Amount Billed",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

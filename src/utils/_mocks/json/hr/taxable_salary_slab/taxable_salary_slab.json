@@ -31,13 +31,6 @@
     {
       "key": "",
       "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
       "type": "select",
       "placeholder": "Input ",
       "options": [

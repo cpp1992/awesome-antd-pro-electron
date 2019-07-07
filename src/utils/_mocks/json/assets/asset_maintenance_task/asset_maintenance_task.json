@@ -20,13 +20,6 @@
       ]
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "maintenanceStatus",
       "label": "Maintenance Status",
       "type": "select",
@@ -41,13 +34,6 @@
           "value": "Cancelled"
         }
       ]
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
     },
     {
       "key": "startDate",
@@ -89,13 +75,6 @@
       ]
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "endDate",
       "label": "End Date",
       "type": "input",
@@ -110,24 +89,10 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "assignTo",
       "label": "Assign To",
       "type": "select",
       "placeholder": "Input Assign To",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -138,13 +103,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "nextDueDate",
       "label": "Next Due Date",
       "type": "input",
@@ -152,24 +110,10 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "lastCompletionDate",
       "label": "Last Completion Date",
       "type": "input",
       "placeholder": "Input Last Completion Date",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

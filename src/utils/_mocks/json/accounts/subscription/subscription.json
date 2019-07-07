@@ -8,13 +8,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "status",
       "label": "Status",
       "type": "select",
@@ -75,13 +68,6 @@
       "label": "Trial Period End Date",
       "type": "input",
       "placeholder": "Input Trial Period End Date",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -169,13 +155,6 @@
           "value": "Net total"
         }
       ]
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
     },
     {
       "key": "additionalDIscountPercentage",

@@ -66,13 +66,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "fromTemplate",
       "label": "From Template",
       "type": "select",
@@ -128,13 +121,6 @@
       "label": "Customer",
       "type": "select",
       "placeholder": "Input Customer",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -215,13 +201,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "actualEndDate",
       "label": "Actual End Date",
       "type": "input",
@@ -271,13 +250,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "totalSalesAmountViaSalesOrder",
       "label": "Total Sales Amount Via Sales Order",
       "type": "input",
@@ -324,13 +296,6 @@
       "label": "Gross Margin",
       "type": "select",
       "placeholder": "Input Gross Margin",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -453,13 +418,6 @@
       "label": "Time To Send",
       "type": "input",
       "placeholder": "Input Time To Send",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

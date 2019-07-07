@@ -15,13 +15,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "model",
       "label": "Model",
       "type": "input",
@@ -54,13 +47,6 @@
       "label": "Location",
       "type": "input",
       "placeholder": "Input Location",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -103,13 +89,6 @@
       "label": "Policy No",
       "type": "input",
       "placeholder": "Input Policy No",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -165,13 +144,6 @@
       "label": "Last Carbon Check",
       "type": "input",
       "placeholder": "Input Last Carbon Check",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

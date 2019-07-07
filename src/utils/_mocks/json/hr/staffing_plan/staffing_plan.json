@@ -15,13 +15,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "fromDate",
       "label": "From Date",
       "type": "input",
@@ -47,13 +40,6 @@
       "label": "Staffing Plan Detail",
       "type": "select",
       "placeholder": "Input Staffing Plan Detail",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

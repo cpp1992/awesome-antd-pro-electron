@@ -22,13 +22,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "noOfShares",
       "label": "No Of Shares",
       "type": "input",
@@ -47,13 +40,6 @@
       "label": "Amount",
       "type": "input",
       "placeholder": "Input Amount",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

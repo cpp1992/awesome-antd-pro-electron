@@ -15,24 +15,10 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "item",
       "label": "Item",
       "type": "select",
       "placeholder": "Input Item",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -52,13 +38,6 @@
       ]
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "cost",
       "label": "Cost",
       "type": "input",
@@ -70,13 +49,6 @@
       "label": "Price List",
       "type": "select",
       "placeholder": "Input Price List",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -100,13 +72,6 @@
       ]
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "billingIntervalCount",
       "label": "Billing Interval Count",
       "type": "input",
@@ -125,13 +90,6 @@
       "label": "Payment Plan",
       "type": "input",
       "placeholder": "Input Payment Plan",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

@@ -22,13 +22,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "leaveType",
       "label": "Leave Type",
       "type": "select",
@@ -75,13 +68,6 @@
       "label": "Half Day Date",
       "type": "input",
       "placeholder": "Input Half Day Date",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

@@ -22,13 +22,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "postingDate",
       "label": "Posting Date",
       "type": "input",
@@ -43,13 +36,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "itemName",
       "label": "Item Name",
       "type": "input",
@@ -61,13 +47,6 @@
       "label": "Outstanding Amount",
       "type": "input",
       "placeholder": "Input Outstanding Amount",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

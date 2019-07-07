@@ -77,13 +77,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "departureDatetime",
       "label": "Departure Datetime",
       "type": "input",
@@ -123,13 +116,6 @@
       "label": "Check Out Date",
       "type": "input",
       "placeholder": "Input Check Out Date",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

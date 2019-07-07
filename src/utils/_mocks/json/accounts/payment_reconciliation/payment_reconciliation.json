@@ -36,13 +36,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "fromInvoiceDate",
       "label": "From Invoice Date",
       "type": "input",

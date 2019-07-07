@@ -45,13 +45,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "stopBirthdayReminders",
       "label": "Stop Birthday Reminders",
       "type": "input",

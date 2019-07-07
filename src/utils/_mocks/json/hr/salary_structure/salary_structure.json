@@ -15,13 +15,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "isActive",
       "label": "Is Active",
       "type": "select",
@@ -78,24 +71,10 @@
       ]
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "salarySlipBasedOnTimesheet",
       "label": "Salary Slip Based On Timesheet",
       "type": "input",
       "placeholder": "Input Salary Slip Based On Timesheet",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -124,13 +103,6 @@
       "label": "Max Benefits Amount",
       "type": "input",
       "placeholder": "Input Max Benefits Amount",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -169,13 +141,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "totalEarning",
       "label": "Total Earning",
       "type": "select",
@@ -208,13 +173,6 @@
       "label": "Mode Of Payment",
       "type": "select",
       "placeholder": "Input Mode Of Payment",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

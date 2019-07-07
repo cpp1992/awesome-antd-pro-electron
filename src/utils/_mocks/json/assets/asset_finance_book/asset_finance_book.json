@@ -39,13 +39,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "frequencyOfDepreciationMonths",
       "label": "Frequency Of Depreciation Months",
       "type": "input",

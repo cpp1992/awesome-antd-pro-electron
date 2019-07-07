@@ -8,13 +8,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "itemName",
       "label": "Item Name",
       "type": "input",
@@ -85,13 +78,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "uom",
       "label": "Uom",
       "type": "select",
@@ -110,13 +96,6 @@
       "label": "Stock Qty",
       "type": "input",
       "placeholder": "Input Stock Qty",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -141,24 +120,10 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "priceListRateCompanyCurrency",
       "label": "Price List Rate Company Currency",
       "type": "select",
       "placeholder": "Input Price List Rate Company Currency",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -173,13 +138,6 @@
       "label": "Amount",
       "type": "select",
       "placeholder": "Input Amount",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -204,13 +162,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "netRate",
       "label": "Net Rate",
       "type": "select",
@@ -222,13 +173,6 @@
       "label": "Net Amount",
       "type": "select",
       "placeholder": "Input Net Amount",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -264,13 +208,6 @@
       "label": "Total Weight",
       "type": "input",
       "placeholder": "Input Total Weight",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -316,13 +253,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "serialNo",
       "label": "Serial No",
       "type": "input",
@@ -355,13 +285,6 @@
       "label": "Item Tax Template",
       "type": "select",
       "placeholder": "Input Item Tax Template",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -404,13 +327,6 @@
       "label": "Enable Deferred Expense",
       "type": "input",
       "placeholder": "Input Enable Deferred Expense",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -488,13 +404,6 @@
       "label": "Include Exploded Items",
       "type": "input",
       "placeholder": "Input Include Exploded Items",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

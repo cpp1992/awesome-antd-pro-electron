@@ -22,13 +22,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "accumulatedDepreciationAmount",
       "label": "Accumulated Depreciation Amount",
       "type": "select",

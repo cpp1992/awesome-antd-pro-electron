@@ -10,21 +10,7 @@
     {
       "key": "",
       "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
       "type": "select",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
       "placeholder": "Input ",
       "options": []
     },
@@ -33,13 +19,6 @@
       "label": "Folio No",
       "type": "input",
       "placeholder": "Input Folio No",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -68,13 +47,6 @@
       "label": "Address Html",
       "type": "input",
       "placeholder": "Input Address Html",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

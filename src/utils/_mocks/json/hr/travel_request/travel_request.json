@@ -44,13 +44,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "purposeOfTravel",
       "label": "Purpose Of Travel",
       "type": "select",
@@ -111,13 +104,6 @@
       "label": "Contact Email",
       "type": "input",
       "placeholder": "Input Contact Email",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

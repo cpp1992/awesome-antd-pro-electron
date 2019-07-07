@@ -84,13 +84,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "company",
       "label": "Company",
       "type": "select",
@@ -147,13 +140,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "grossPurchaseAmount",
       "label": "Gross Purchase Amount",
       "type": "select",
@@ -165,13 +151,6 @@
       "label": "Available For Use Date",
       "type": "input",
       "placeholder": "Input Available For Use Date",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -217,13 +196,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "depreciationMethod",
       "label": "Depreciation Method",
       "type": "select",
@@ -255,13 +227,6 @@
       "label": "Total Number Of Depreciations",
       "type": "input",
       "placeholder": "Input Total Number Of Depreciations",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -318,13 +283,6 @@
       "label": "Insured Value",
       "type": "input",
       "placeholder": "Input Insured Value",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -418,13 +376,6 @@
       "label": "Booked Fixed Asset",
       "type": "input",
       "placeholder": "Input Booked Fixed Asset",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

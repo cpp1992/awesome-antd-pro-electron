@@ -78,13 +78,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "postingDate",
       "label": "Posting Date",
       "type": "input",
@@ -120,13 +113,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "referenceNumber",
       "label": "Reference Number",
       "type": "input",
@@ -145,13 +131,6 @@
       "label": "User Remark",
       "type": "input",
       "placeholder": "Input User Remark",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -246,13 +225,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "billNo",
       "label": "Bill No",
       "type": "input",
@@ -300,13 +272,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "writeOffAmount",
       "label": "Write Off Amount",
       "type": "select",
@@ -325,13 +290,6 @@
       "label": "Pay To Recd From",
       "type": "input",
       "placeholder": "Input Pay To Recd From",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -367,13 +325,6 @@
       "label": "Payment Order",
       "type": "select",
       "placeholder": "Input Payment Order",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

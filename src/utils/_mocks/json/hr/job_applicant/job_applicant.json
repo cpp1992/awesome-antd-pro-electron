@@ -35,13 +35,6 @@
       ]
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "jobOpening",
       "label": "Job Opening",
       "type": "select",
@@ -60,13 +53,6 @@
       "label": "Source Name",
       "type": "select",
       "placeholder": "Input Source Name",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

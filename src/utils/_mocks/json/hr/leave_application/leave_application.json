@@ -22,13 +22,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "leaveType",
       "label": "Leave Type",
       "type": "select",
@@ -47,13 +40,6 @@
       "label": "Leave Balance Before Application",
       "type": "input",
       "placeholder": "Input Leave Balance Before Application",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -92,24 +78,10 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "reason",
       "label": "Reason",
       "type": "input",
       "placeholder": "Input Reason",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -124,13 +96,6 @@
       "label": "Leave Approver Name",
       "type": "input",
       "placeholder": "Input Leave Approver Name",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -161,13 +126,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "postingDate",
       "label": "Posting Date",
       "type": "input",
@@ -186,13 +144,6 @@
       "label": "Color",
       "type": "input",
       "placeholder": "Input Color",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

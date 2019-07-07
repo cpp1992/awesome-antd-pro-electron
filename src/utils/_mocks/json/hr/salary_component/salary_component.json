@@ -62,13 +62,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "disabled",
       "label": "Disabled",
       "type": "input",
@@ -111,13 +104,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "payAgainstBenefitClaim",
       "label": "Pay Against Benefit Claim",
       "type": "input",
@@ -136,13 +122,6 @@
       "label": "Create Separate Payment Entry Against Benefit Claim",
       "type": "input",
       "placeholder": "Input Create Separate Payment Entry Against Benefit Claim",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -199,13 +178,6 @@
       "label": "Amount",
       "type": "input",
       "placeholder": "Input Amount",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

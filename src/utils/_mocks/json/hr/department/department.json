@@ -36,13 +36,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "leaveBlockList",
       "label": "Leave Block List",
       "type": "select",

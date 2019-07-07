@@ -34,13 +34,6 @@
       ]
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "creditController",
       "label": "Credit Controller",
       "type": "select",
@@ -101,13 +94,6 @@
       "label": "Show Inclusive Tax In Print",
       "type": "input",
       "placeholder": "Input Show Inclusive Tax In Print",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

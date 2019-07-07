@@ -31,13 +31,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "amount",
       "label": "Amount",
       "type": "input",

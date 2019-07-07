@@ -8,13 +8,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "series",
       "label": "Series",
       "type": "select",
@@ -61,13 +54,6 @@
       "label": "Company Address",
       "type": "select",
       "placeholder": "Input Company Address",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -148,24 +134,10 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "itemGroups",
       "label": "Item Groups",
       "type": "select",
       "placeholder": "Input Item Groups",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -197,13 +169,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "termsAndConditions",
       "label": "Terms And Conditions",
       "type": "select",
@@ -229,13 +194,6 @@
       "label": "Territory",
       "type": "select",
       "placeholder": "Input Territory",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -292,13 +250,6 @@
       "label": "Account For Change Amount",
       "type": "select",
       "placeholder": "Input Account For Change Amount",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

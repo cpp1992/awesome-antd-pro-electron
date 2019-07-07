@@ -22,13 +22,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "supplier",
       "label": "Supplier",
       "type": "select",
@@ -61,13 +54,6 @@
       "label": "Bank Account",
       "type": "select",
       "placeholder": "Input Bank Account",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

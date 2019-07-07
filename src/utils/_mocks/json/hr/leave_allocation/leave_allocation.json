@@ -29,13 +29,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "leaveType",
       "label": "Leave Type",
       "type": "select",
@@ -96,13 +89,6 @@
       "label": "Total Leaves Encashed",
       "type": "input",
       "placeholder": "Input Total Leaves Encashed",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

@@ -36,13 +36,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "leaveAllocation",
       "label": "Leave Allocation",
       "type": "select",

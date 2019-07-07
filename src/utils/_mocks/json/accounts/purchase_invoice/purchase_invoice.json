@@ -64,13 +64,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "company",
       "label": "Company",
       "type": "select",
@@ -134,13 +127,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "reasonForPuttingOnHold",
       "label": "Reason For Putting On Hold",
       "type": "input",
@@ -159,13 +145,6 @@
       "label": "Supplier Invoice No",
       "type": "input",
       "placeholder": "Input Supplier Invoice No",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -239,13 +218,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "selectShippingAddress",
       "label": "Select Shipping Address",
       "type": "select",
@@ -281,13 +253,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "priceList",
       "label": "Price List",
       "type": "select",
@@ -316,13 +281,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "setAcceptedWarehouse",
       "label": "Set Accepted Warehouse",
       "type": "select",
@@ -334,13 +292,6 @@
       "label": "Rejected Warehouse",
       "type": "select",
       "placeholder": "Input Rejected Warehouse",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -405,13 +356,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "totalQuantity",
       "label": "Total Quantity",
       "type": "input",
@@ -430,13 +374,6 @@
       "label": "Net Total Company Currency",
       "type": "select",
       "placeholder": "Input Net Total Company Currency",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -475,24 +412,10 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "shippingRule",
       "label": "Shipping Rule",
       "type": "select",
       "placeholder": "Input Shipping Rule",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -552,13 +475,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "taxesAndChargesAdded",
       "label": "Taxes And Charges Added",
       "type": "select",
@@ -610,13 +526,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "additionalDiscountPercentage",
       "label": "Additional Discount Percentage",
       "type": "input",
@@ -628,13 +537,6 @@
       "label": "Additional Discount Amount",
       "type": "select",
       "placeholder": "Input Additional Discount Amount",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -663,13 +565,6 @@
       "label": "In Words Company Currency",
       "type": "input",
       "placeholder": "Input In Words Company Currency",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -743,13 +638,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "paidAmount",
       "label": "Paid Amount",
       "type": "select",
@@ -782,13 +670,6 @@
       "label": "Write Off Amount Company Currency",
       "type": "select",
       "placeholder": "Input Write Off Amount Company Currency",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -897,13 +778,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "printHeading",
       "label": "Print Heading",
       "type": "select",
@@ -955,13 +829,6 @@
       "label": "Against Expense Account",
       "type": "input",
       "placeholder": "Input Against Expense Account",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -1037,13 +904,6 @@
       "label": "To Date",
       "type": "input",
       "placeholder": "Input To Date",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

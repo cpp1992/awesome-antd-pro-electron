@@ -8,13 +8,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "sponsoredAmount",
       "label": "Sponsored Amount",
       "type": "input",
@@ -33,13 +26,6 @@
       "label": "Total Amount",
       "type": "input",
       "placeholder": "Input Total Amount",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

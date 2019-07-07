@@ -57,13 +57,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "startDate",
       "label": "Start Date",
       "type": "input",
@@ -82,13 +75,6 @@
       "label": "Weight",
       "type": "input",
       "placeholder": "Input Weight",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

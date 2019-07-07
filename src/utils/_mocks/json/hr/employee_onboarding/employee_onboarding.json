@@ -56,13 +56,6 @@
       ]
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "employeeOnboardingTemplate",
       "label": "Employee Onboarding Template",
       "type": "select",
@@ -102,13 +95,6 @@
       "label": "Project",
       "type": "select",
       "placeholder": "Input Project",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

@@ -15,13 +15,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "statisticalComponent",
       "label": "Statistical Component",
       "type": "input",
@@ -61,13 +54,6 @@
       "label": "Depends On Leave Without Pay",
       "type": "input",
       "placeholder": "Input Depends On Leave Without Pay",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -124,13 +110,6 @@
       "label": "Tax On Additional Salary",
       "type": "input",
       "placeholder": "Input Tax On Additional Salary",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

@@ -78,13 +78,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "company",
       "label": "Company",
       "type": "select",
@@ -148,13 +141,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "updateBilledAmountInSalesOrder",
       "label": "Update Billed Amount In Sales Order",
       "type": "input",
@@ -173,13 +159,6 @@
       "label": "Customer S Purchase Order",
       "type": "input",
       "placeholder": "Input Customer S Purchase Order",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -246,13 +225,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "shippingAddressName",
       "label": "Shipping Address Name",
       "type": "select",
@@ -302,13 +274,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "priceList",
       "label": "Price List",
       "type": "select",
@@ -334,13 +299,6 @@
       "label": "Ignore Pricing Rule",
       "type": "input",
       "placeholder": "Input Ignore Pricing Rule",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -421,13 +379,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "totalQuantity",
       "label": "Total Quantity",
       "type": "input",
@@ -446,13 +397,6 @@
       "label": "Net Total Company Currency",
       "type": "select",
       "placeholder": "Input Net Total Company Currency",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -491,24 +435,10 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "shippingRule",
       "label": "Shipping Rule",
       "type": "select",
       "placeholder": "Input Shipping Rule",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -540,24 +470,10 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "totalTaxesAndChargesCompanyCurrency",
       "label": "Total Taxes And Charges Company Currency",
       "type": "select",
       "placeholder": "Input Total Taxes And Charges Company Currency",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -593,13 +509,6 @@
       "label": "Redeem Loyalty Points",
       "type": "input",
       "placeholder": "Input Redeem Loyalty Points",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -654,13 +563,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "additionalDiscountPercentage",
       "label": "Additional Discount Percentage",
       "type": "input",
@@ -707,13 +609,6 @@
       "label": "In Words Company Currency",
       "type": "input",
       "placeholder": "Input In Words Company Currency",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -829,24 +724,10 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "paidAmountCompanyCurrency",
       "label": "Paid Amount Company Currency",
       "type": "select",
       "placeholder": "Input Paid Amount Company Currency",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -857,24 +738,10 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "baseChangeAmountCompanyCurrency",
       "label": "Base Change Amount Company Currency",
       "type": "select",
       "placeholder": "Input Base Change Amount Company Currency",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -917,13 +784,6 @@
       "label": "Write Off Outstanding Amount",
       "type": "input",
       "placeholder": "Input Write Off Outstanding Amount",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -990,13 +850,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "printHeading",
       "label": "Print Heading",
       "type": "select",
@@ -1029,13 +882,6 @@
       "label": "Campaign",
       "type": "select",
       "placeholder": "Input Campaign",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -1138,13 +984,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "remarks",
       "label": "Remarks",
       "type": "input",
@@ -1163,13 +1002,6 @@
       "label": "Sales Partner",
       "type": "select",
       "placeholder": "Input Sales Partner",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -1219,13 +1051,6 @@
       "label": "To Date",
       "type": "input",
       "placeholder": "Input To Date",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

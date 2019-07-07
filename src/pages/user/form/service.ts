@@ -12,3 +12,13 @@ export async function fakeSubmitForm(params: any) {
     data: params,
   })
 }
+
+export async function submitForm(params: any) {
+  console.log('User submit values: ', params);
+  const { name, action, data } = params;
+  return window.api.request({
+    url: `/api/${name}/${action}`,
+    method: 'post',
+    data,
+  })
+}

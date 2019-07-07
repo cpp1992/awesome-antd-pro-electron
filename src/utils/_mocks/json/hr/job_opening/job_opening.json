@@ -27,13 +27,6 @@
       ]
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "designation",
       "label": "Designation",
       "type": "select",
@@ -59,13 +52,6 @@
       "label": "Planned Number Of Positions",
       "type": "input",
       "placeholder": "Input Planned Number Of Positions",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

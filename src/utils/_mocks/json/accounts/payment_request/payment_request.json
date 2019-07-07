@@ -20,13 +20,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "series",
       "label": "Series",
       "type": "select",
@@ -62,13 +55,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "referenceDoctype",
       "label": "Reference Doctype",
       "type": "select",
@@ -101,13 +87,6 @@
       "label": "Is A Subscription",
       "type": "input",
       "placeholder": "Input Is A Subscription",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -167,13 +146,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "iban",
       "label": "Iban",
       "type": "input",
@@ -223,13 +195,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "paymentGatewayAccount",
       "label": "Payment Gateway Account",
       "type": "select",
@@ -273,13 +238,6 @@
       "label": "Make Sales Invoice",
       "type": "input",
       "placeholder": "Input Make Sales Invoice",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

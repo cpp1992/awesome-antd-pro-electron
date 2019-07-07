@@ -22,13 +22,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "fullName",
       "label": "Full Name",
       "type": "input",
@@ -47,13 +40,6 @@
       "label": "View Attachments",
       "type": "input",
       "placeholder": "Input View Attachments",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

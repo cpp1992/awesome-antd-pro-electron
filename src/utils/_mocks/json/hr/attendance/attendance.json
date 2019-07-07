@@ -60,13 +60,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "attendanceDate",
       "label": "Attendance Date",
       "type": "input",

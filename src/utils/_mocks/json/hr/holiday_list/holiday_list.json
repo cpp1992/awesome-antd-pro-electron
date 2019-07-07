@@ -22,13 +22,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "totalHolidays",
       "label": "Total Holidays",
       "type": "input",
@@ -104,13 +97,6 @@
       "label": "Clear Table",
       "type": "select",
       "placeholder": "Input Clear Table",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

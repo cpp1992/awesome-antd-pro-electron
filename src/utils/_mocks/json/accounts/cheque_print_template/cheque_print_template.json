@@ -82,13 +82,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "isAccountPayable",
       "label": "Is Account Payable",
       "type": "input",
@@ -114,13 +107,6 @@
       "label": "Message To Show",
       "type": "input",
       "placeholder": "Input Message To Show",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -163,13 +149,6 @@
       "label": "Starting Location From Left Edge",
       "type": "input",
       "placeholder": "Input Starting Location From Left Edge",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -226,13 +205,6 @@
       "label": "Starting Location From Left Edge",
       "type": "input",
       "placeholder": "Input Starting Location From Left Edge",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

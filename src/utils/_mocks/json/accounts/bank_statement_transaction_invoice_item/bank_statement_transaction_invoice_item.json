@@ -38,13 +38,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "invoiceDate",
       "label": "Invoice Date",
       "type": "input",

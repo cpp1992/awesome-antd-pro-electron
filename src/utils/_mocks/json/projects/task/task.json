@@ -22,13 +22,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "status",
       "label": "Status",
       "type": "select",
@@ -84,13 +77,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "expectedStartDate",
       "label": "Expected Start Date",
       "type": "input",
@@ -109,13 +95,6 @@
       "label": "Weight",
       "type": "input",
       "placeholder": "Input Weight",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -182,13 +161,6 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "actualStartDateViaTimeSheet",
       "label": "Actual Start Date Via Time Sheet",
       "type": "input",
@@ -203,24 +175,10 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "actualEndDateViaTimeSheet",
       "label": "Actual End Date Via Time Sheet",
       "type": "input",
       "placeholder": "Input Actual End Date Via Time Sheet",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -238,24 +196,10 @@
       "options": []
     },
     {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
-      "options": []
-    },
-    {
       "key": "totalBillingAmountViaTimeSheet",
       "label": "Total Billing Amount Via Time Sheet",
       "type": "input",
       "placeholder": "Input Total Billing Amount Via Time Sheet",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {
@@ -270,13 +214,6 @@
       "label": "Closing Date",
       "type": "input",
       "placeholder": "Input Closing Date",
-      "options": []
-    },
-    {
-      "key": "",
-      "label": "",
-      "type": "input",
-      "placeholder": "Input ",
       "options": []
     },
     {

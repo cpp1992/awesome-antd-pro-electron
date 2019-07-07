@@ -34,6 +34,7 @@ export const dbInitModule = (pool: any, collections: string[]): { [name: string]
 };
 
 pool = dbInitModule({}, collections);
+console.log('window pool basic:', pool);
 
 // init some mock data
 const currentUser = user['GET /api/currentUser'];
@@ -68,8 +69,14 @@ pool.geographic.set('province', geographic.province).write();
 pool.geographic.set('city', geographic.city).write();
 
 // 初始化每个对象模型的表单信息
-pool.model.get('model').push('user').write();
-pool.model.get('model').push('login').write();
+pool.model.get('model').push({
+  title: 'user',
+  value: 'user',
+}).write();
+pool.model.get('model').push({
+  title: 'login',
+  value: 'login'
+}).write();
 pool.model.set('user', userModel.fields).write();
 pool.model.set('login', loginModel.fields).write();
 
@@ -80,12 +87,16 @@ MockModels.keys().forEach((fileName: string) => {
   const fileNameMeta = tail(fileName.split('/'));
   const modelNameCamel = camelCase(nth(fileNameMeta, -2))
 
-  pool.model.get('model').push(modelNameCamel).write();
+  pool.model.get('model').push({
+    title: modelNameCamel,
+    value: modelNameCamel,
+  }).write();
   pool.model.set(modelNameCamel, MockModels(fileName).fields).write();
 
 })
 
-pool = dbInitModule(pool, pool.model.get('model').value());
+pool = dbInitModule(pool, pool.model.get('model').value().map(v => v.title));
+console.log('window pool dynamic', pool);
 
 window.pool = pool;
 
