@@ -106,9 +106,9 @@ class MForm extends Component<FormProps> {
     let itemDom = null;
 
     const { key, type, options } = item;
-    const label = `${param(modelName)}.${key}.label`
+    const label = `${param(modelName)}-form.${key}.label`
     // const placeholderX = `${param(modelName)}.${key}.placeholder`
-    const placeholderX = `${param(modelName)}.${key}.label`
+    const placeholderX = `${param(modelName)}-form.${key}.label`
 
     switch (type) {
       case 'input':

@@ -34,6 +34,7 @@ export interface ModelType {
   reducers: {
     save: Reducer<StateType>;
     setColumns: Reducer<StateType>;
+    setModelName: Reducer<StateType>;
   };
 }
 
@@ -41,7 +42,7 @@ const Model: ModelType = {
   namespace: 'userTableList',
 
   state: {
-    modelName: 'userTableList',
+    modelName: 'user',
     data: {
       list: [],
       pagination: {},
@@ -62,11 +63,12 @@ const Model: ModelType = {
       yield call(updateModel, payload);
       if (callback) callback();
     },
-    * queryModelFields({ payload }, { call, put }) {
+    * queryModelFields({ payload, callback }, { call, put }) {
 
       console.log('[Effects] Query Model Fields: ', payload)
       const response: LfResponse = yield call(queryModelFields, payload);
       // Generate columns from form fields
+      const name = payload.url.split('/')[2];
       const fields: FilterFormList[] = response.data.entity;
       const columns: StandardTableColumnProps[] = fields.map(field => {
         field.dataIndex = field.key as string;
@@ -80,6 +82,11 @@ const Model: ModelType = {
         type: 'setColumns',
         payload: columns,
       });
+      yield put({
+        type: 'setModelName',
+        payload: name,
+      });
+      if (callback) callback();
     },
     * queryModelData({ payload }, { call, put }) {
       console.log('[Effects] Query Model Data: ', payload)
@@ -106,6 +113,12 @@ const Model: ModelType = {
       return {
         ...state,
         columns: action.payload,
+      };
+    },
+    setModelName(state, action) {
+      return {
+        ...state,
+        modelName: action.payload,
       };
     },
   },

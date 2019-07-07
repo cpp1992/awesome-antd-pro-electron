@@ -36,7 +36,7 @@ interface FormProps extends FormComponentProps {
 }))
 class UserForm extends Component<FormProps> {
   state = {
-    modelName: 'userForm',
+    modelName: 'user',
     modelNameOptions: [
       {
         title: 'user',

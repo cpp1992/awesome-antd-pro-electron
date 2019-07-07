@@ -29,7 +29,7 @@ const Model: ModelType = {
   namespace: 'userForm',
 
   state: {
-    modelName: 'userForm',
+    modelName: 'user',
     modelFields: [],
   },
 
@@ -45,11 +45,12 @@ const Model: ModelType = {
     * queryModelFields({ payload }, { call, put }) {
       console.log('[Effects] Query Model payload: ', payload)
       const response: LfResponse = yield call(queryModelFields, payload);
+      const name = payload.url.split('/')[2];
       const fields = response.data.entity;
       yield put({
         type: 'save',
         payload: {
-          name: payload.name,
+          name,
           fields,
         },
       });

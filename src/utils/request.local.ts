@@ -99,19 +99,19 @@ const lfService: LfService = {
           break;
         case 'delete':
           requestedData = baseData('success', `delete ${namespace}`);
-          console.log(data.key);
-          if (Array.isArray(data.key)) {
-            data.key.forEach(key => {
-              entities.removeWhere({ key }).write();
+          console.log('[Delete] id', data.id);
+          if (Array.isArray(data.id)) {
+            data.id.forEach(key => {
+              entities.removeWhere({ id: key }).write();
             });
-            requestedData.entity = data.key;
+            requestedData.entity = data.id;
           } else {
-            requestedData.entity = entities.removeWhere({ key: data.key }).write();
+            requestedData.entity = entities.removeWhere({ id: data.id }).write();
           }
           break;
         case 'patch':
           requestedData = baseData('success', `update ${namespace}`);
-          requestedData.entity = entities.updateWhere({ key: data.key }, data).write();
+          requestedData.entity = entities.updateWhere({ id: data.id }, data).write();
           break;
         case 'get':
           requestedData = baseData('success', `get ${namespace}`);
@@ -127,9 +127,9 @@ const lfService: LfService = {
               console.log('5. Querying without pagination...');
               requestedData.entity = entities.value();
             }
-          } else if (data.key !== undefined) {
+          } else if (data.id !== undefined) {
               console.log('3. Querying with unique key...', data);
-              requestedData.entity = entities.find({ key: data.key }).value();
+              requestedData.entity = entities.find({ id: data.id }).value();
           } else {
             // options.params.pagination, query
             console.log('3. Querying with data object...', data);

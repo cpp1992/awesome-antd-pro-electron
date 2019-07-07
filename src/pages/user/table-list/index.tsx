@@ -54,6 +54,7 @@ interface TableListState {
   selectedRows: TableListItem[];
   formValues: { [key: string]: string };
   stepFormValues: Partial<TableListItem>;
+  modelNameOptions: any[];
 }
 
 /* eslint react/no-multi-comp:0 */
@@ -81,6 +82,24 @@ class TableList extends Component<TableListProps, TableListState> {
     selectedRows: [],
     formValues: {},
     stepFormValues: {},
+    modelNameOptions: [
+      {
+        title: 'user',
+        value: 'user',
+      },
+      {
+        title: 'employee',
+        value: 'employee',
+      },
+      {
+        title: 'asset',
+        value: 'asset',
+      },
+      {
+        title: 'bank',
+        value: 'bank',
+      },
+    ],
   };
 
   // hack here for table columns
@@ -106,7 +125,8 @@ class TableList extends Component<TableListProps, TableListState> {
   ];
 
   componentDidMount() {
-    this.fetch();
+    console.log('Current Model Name: ', this.props.userTableList.modelName);
+    this.queryModelFields();
   }
 
   handleStandardTableChange = (
@@ -114,7 +134,7 @@ class TableList extends Component<TableListProps, TableListState> {
     filtersArg: Record<keyof TableListItem, string[]>,
     sorter: SorterResult<TableListItem>,
   ) => {
-    const { dispatch } = this.props;
+    const { userTableList: { modelName }, dispatch } = this.props;
     const { formValues } = this.state;
 
     const filters = Object.keys(filtersArg).reduce((obj, key) => {
@@ -143,7 +163,7 @@ class TableList extends Component<TableListProps, TableListState> {
     dispatch({
       type: 'userTableList/queryModelData',
       payload: {
-        url: '/api/user/data',
+        url: `/api/${modelName}/data`,
         data,
         params: {
           pageParams,
@@ -153,7 +173,7 @@ class TableList extends Component<TableListProps, TableListState> {
   };
 
   handleFormReset = () => {
-    const { form, dispatch } = this.props;
+    const { userTableList: { modelName }, dispatch, form } = this.props;
     form.resetFields();
     this.setState({
       formValues: {},
@@ -161,7 +181,7 @@ class TableList extends Component<TableListProps, TableListState> {
     dispatch({
       type: 'userTableList/queryModelFields',
       payload: {
-        url: '/api/user/fields',
+        url: `/api/${modelName}/fields`,
       },
     });
   };
@@ -174,7 +194,7 @@ class TableList extends Component<TableListProps, TableListState> {
   };
 
   handleMenuClick = (e: { key: string }) => {
-    const { dispatch } = this.props;
+    const { userTableList: { modelName }, dispatch } = this.props;
     const { selectedRows } = this.state;
 
     if (!selectedRows) return;
@@ -183,10 +203,10 @@ class TableList extends Component<TableListProps, TableListState> {
         dispatch({
           type: 'userTableList/queryModelData',
           payload: {
-            url: '/api/user/data',
+            url: `/api/${modelName}/data`,
             method: 'delete',
             data: {
-              key: selectedRows.map(row => row.key),
+              id: selectedRows.map(row => row.id),
             },
           },
           callback: () => {
@@ -211,7 +231,7 @@ class TableList extends Component<TableListProps, TableListState> {
   handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const { dispatch, form } = this.props;
+    const { userTableList: { modelName }, dispatch, form } = this.props;
 
     form.validateFields((err, values) => {
       if (err) return;
@@ -224,7 +244,7 @@ class TableList extends Component<TableListProps, TableListState> {
       dispatch({
         type: 'userTableList/queryModelData',
         payload: {
-          url: '/api/user/data',
+          url: `/api/${modelName}/data`,
           data: values,
         },
       });
@@ -248,11 +268,11 @@ class TableList extends Component<TableListProps, TableListState> {
    * add func
    */
   handleAdd = fields => {
-    const { dispatch } = this.props;
+    const { userTableList: { modelName }, dispatch } = this.props;
     dispatch({
       type: 'userTableList/add',
       payload: {
-        url: '/api/user/data',
+        url: `/api/${modelName}/data`,
         method: 'post',
         data: fields,
       },
@@ -267,11 +287,11 @@ class TableList extends Component<TableListProps, TableListState> {
    * update func
    */
   handleUpdate = (fields: FormValsType) => {
-    const { dispatch } = this.props;
+    const { userTableList: { modelName }, dispatch } = this.props;
     dispatch({
       type: 'userTableList/update',
       payload: {
-        url: '/api/user/data',
+        url: `/api/${modelName}/data`,
         method: 'patch',
         data: fields,
       },
@@ -282,36 +302,56 @@ class TableList extends Component<TableListProps, TableListState> {
     this.handleUpdateModalVisible();
   };
 
-  queryModelFields() {
+  selectChanged = (name) => {
     const { dispatch } = this.props;
+    console.log('Change model: ', name);
     dispatch({
       type: 'userTableList/queryModelFields',
       payload: {
-        url: '/api/user/fields',
+        url: `/api/${name}/fields`,
       },
+      callback: () => this.queryModelData(),
+    })
+  }
+
+  queryModelFields() {
+    const { userTableList: { modelName }, dispatch } = this.props;
+    dispatch({
+      type: 'userTableList/queryModelFields',
+      payload: {
+        url: `/api/${modelName}/fields`,
+      },
+      callback: () => this.queryModelData()
     });
   }
 
   queryModelData() {
-    const { dispatch } = this.props;
+    const { userTableList: { modelName }, dispatch } = this.props;
     dispatch({
       type: 'userTableList/queryModelData',
       payload: {
-        url: '/api/user/data',
+        url: `/api/${modelName}/data`,
       },
     });
   }
 
-  fetch() {
-    const { dispatch } = this.props;
-    this.queryModelFields();
-    this.queryModelData();
+  renderTitle() {
+    const { modelNameOptions } = this.state;
+    return (
+      <Select showSearch defaultValue="user" style={{ width: 100, maxWidth: 220 }} onSelect={this.selectChanged}>
+      {modelNameOptions.map(item => (
+        <Option key={item.title} value={item.value}>
+          {item.title}
+        </Option>
+        ))}
+      </Select>
+    )
   }
 
   renderSimpleForm() {
     const { form, userTableList: { columns } } = this.props;
     const { getFieldDecorator } = form;
-    const formFields = columns.slice(0, 3);
+    const formFields = columns.slice(1, 4);
     return (
       <Form onSubmit={this.handleSearch} layout="inline">
         <Row gutter={{ md: 8, lg: 24, xl: 48 }}>
@@ -341,16 +381,15 @@ class TableList extends Component<TableListProps, TableListState> {
   renderAdvancedForm() {
     const { form, userTableList: { columns } } = this.props;
     const { getFieldDecorator } = form;
+    const formFields = columns.slice(1, 8);
     return (
       <Form onSubmit={this.handleSearch} layout="inline">
         <Row gutter={{ md: 8, lg: 24, xl: 48 }}>
-          <Col md={8} sm={24}>
-          {columns.map(field => <Col md={8} sm={24}>
+          {formFields.map(field => <Col md={8} sm={24}>
             <FormItem label={field.key}>
               {getFieldDecorator(field.key)(<Input />)}
             </FormItem>
           </Col>)}
-          </Col>
         </Row>
         <div style={{ overflow: 'hidden' }}>
           <div style={{ float: 'right', marginBottom: 24 }}>
@@ -381,6 +420,8 @@ class TableList extends Component<TableListProps, TableListState> {
       form,
     } = this.props;
 
+    const formFields = columns.slice(1, 6);
+
     const {
  selectedRows, modalVisible, updateModalVisible, stepFormValues,
 } = this.state;
@@ -403,7 +444,7 @@ class TableList extends Component<TableListProps, TableListState> {
 
     return (
       <PageHeaderWrapper>
-        <Card bordered={false}>
+        <Card title={this.renderTitle()} bordered={false}>
           <div className={styles.tableList}>
             <div className={styles.tableListForm}>{this.renderForm()}</div>
             <div className={styles.tableListOperator}>
@@ -426,7 +467,7 @@ class TableList extends Component<TableListProps, TableListState> {
               selectedRows={selectedRows}
               loading={loading}
               data={data}
-              columns={columns}
+              columns={formFields}
               onSelectRow={this.handleSelectRows}
               onChange={this.handleStandardTableChange}
             />
