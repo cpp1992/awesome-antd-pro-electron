@@ -38,7 +38,7 @@ const Model: ModelType = {
   effects: {
     * fetchCurrent(_, { call, put }) {
       const response: LfResponse = yield call(queryCurrentUser);
-      const payload = response.data.entity[0];
+      const payload = response.data.entity;
       yield put({
         type: 'saveCurrentUser',
         payload,

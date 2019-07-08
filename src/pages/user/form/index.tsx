@@ -59,7 +59,7 @@ class UserForm extends Component<FormProps> {
   renderTitle() {
     const { modelNameOptions } = this.props;
     return (
-      <Select showSearch defaultValue="user" style={{ width: 100, maxWidth: 220 }} onSelect={this.selectChanged}>
+      <Select showSearch defaultValue="member" style={{ width: 150, maxWidth: 220 }} onSelect={this.selectChanged}>
       {modelNameOptions.map(item => (
         <Option key={item.title} value={item.value}>
           {item.title}

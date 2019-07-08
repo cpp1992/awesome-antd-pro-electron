@@ -56,10 +56,10 @@ const Model: ModelType = {
     },
     * fetchCurrent(_, { call, put }) {
       const response: LfResponse = yield call(queryCurrent);
-      console.log(response);
+      const payload = response.data.entity;
       yield put({
         type: 'saveCurrentUser',
-        payload: response.data.entity,
+        payload,
       });
     },
     * fetchProvince(_, { call, put }) {
