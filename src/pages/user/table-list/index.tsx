@@ -125,7 +125,8 @@ class TableList extends Component<TableListProps, TableListState> {
   ];
 
   componentDidMount() {
-    console.log('Current Model Name: ', this.props.userTableList.modelName);
+    const { userTableList: { modelName } } = this.props;
+    console.log('Current Model Name: ', modelName);
     this.queryModelFields();
   }
 
@@ -321,7 +322,7 @@ class TableList extends Component<TableListProps, TableListState> {
       payload: {
         url: `/api/${modelName}/fields`,
       },
-      callback: () => this.queryModelData()
+      callback: () => this.queryModelData(),
     });
   }
 

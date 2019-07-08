@@ -104,6 +104,10 @@ export default {
       authority: ['admin', 'user'],
       routes: [
         {
+          path: '/',
+          redirect: '/dashboard/analysis',
+        },
+        {
           name: 'dashboard',
           path: '/dashboard',
           routes: [
@@ -111,6 +115,16 @@ export default {
               name: 'analysis',
               path: '/dashboard/analysis',
               component: './dashboard/analysis',
+            },
+            {
+              name: 'monitor',
+              path: '/dashboard/monitor',
+              component: './dashboard/monitor',
+            },
+            {
+              name: 'workplace',
+              path: '/dashboard/workplace',
+              component: './dashboard/workplace',
             },
           ],
         },
@@ -121,14 +135,24 @@ export default {
             {
               name: 'user-form',
               path: '/user/form',
-              component: './user/form'
+              component: './user/form',
             },
             {
               name: 'table-list',
               path: '/user/table-list',
               component: './user/table-list',
             },
-          ]
+            {
+              name: 'basic-list',
+              path: '/user/basic-list',
+              component: './user/basic-list',
+            },
+            {
+              name: 'card-list',
+              path: '/user/card-list',
+              component: './user/card-list',
+            },
+          ],
         },
         {
           name: 'account',
@@ -139,15 +163,33 @@ export default {
               path: '/account/settings',
               component: './account/settings',
             },
+            {
+              name: 'center',
+              path: '/account/center',
+              component: './account/center',
+            },
+          ],
+        },
+        {
+          name: 'editor',
+          path: '/editor',
+          routes: [
+            {
+              name: 'flow',
+              path: '/editor/flow',
+              component: './editor/flow',
+            },
+            {
+              name: 'mind',
+              path: '/editor/mind',
+              component: './editor/mind',
+            },
           ],
         },
         {
           component: './404',
         },
       ],
-    },
-    {
-      component: './404',
     },
   ],
   // Theme for antd: https://ant.design/docs/react/customize-theme-cn
