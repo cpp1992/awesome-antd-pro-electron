@@ -2,13 +2,15 @@ import {
   tail, first, last, nth, camelCase,
 } from 'lodash';
 import loadashId from 'lodash-id';
-import low, { LowdbSync } from 'lowdb';
+import low from 'lowdb';
 import FileSync from 'lowdb/adapters/FileSync';
 import Memory from 'lowdb/adapters/Memory';
 
+import user from '../../mock/user';
+import notices from '../../mock/notices';
 import rule from '../pages/user/table-list/_mock';
 import geographic from '../pages/account/settings/_mock';
-import center, { fakeList } from '../pages/account/center/_mock';
+import { fakeList } from '../pages/account/center/_mock';
 
 // const adapter = new FileSync(join(__dirname, "data.json"));
 
@@ -31,13 +33,13 @@ export const dbInitModule = (pool: any, collections: string[]): { [name: string]
 pool = dbInitModule({}, collections);
 
 // init some mock data
-const currentUser = center['GET /api/currentUser'];
+const currentUser = user['GET /api/currentUser'];
 pool.login
   .get('data')
   .insert(currentUser)
   .write();
 
-currentUser.notice.forEach(notice => {
+notices.notices.forEach(notice => {
   pool.notice
     .get('data')
     .insert(notice)

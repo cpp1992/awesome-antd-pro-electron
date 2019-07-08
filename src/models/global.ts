@@ -44,56 +44,54 @@ const GlobalModel: GlobalModelType = {
     collapsed: false,
     notices: [],
     models: [
-      [
-        {
-          title: 'member',
-          value: 'member',
-        },
-        {
-          title: 'document',
-          value: 'document',
-        },
-        {
-          title: 'event',
-          value: 'event',
-        },
-        {
-          title: 'appraisal',
-          value: 'appraisal',
-        },
-        {
-          title: 'designation',
-          value: 'designation',
-        },
-        {
-          title: 'attendance',
-          value: 'attendance',
-        },
-        {
-          title: 'department',
-          value: 'department',
-        },
-        {
-          title: 'designation',
-          value: 'designation',
-        },
-        {
-          title: 'employee',
-          value: 'employee',
-        },
-        {
-          title: 'project',
-          value: 'project',
-        },
-        {
-          title: 'task',
-          value: 'task',
-        },
-        {
-          title: 'timesheet',
-          value: 'timesheet',
-        },
-      ]
+      {
+        title: 'member',
+        value: 'member',
+      },
+      {
+        title: 'document',
+        value: 'document',
+      },
+      {
+        title: 'event',
+        value: 'event',
+      },
+      {
+        title: 'appraisal',
+        value: 'appraisal',
+      },
+      {
+        title: 'designation',
+        value: 'designation',
+      },
+      {
+        title: 'attendance',
+        value: 'attendance',
+      },
+      {
+        title: 'department',
+        value: 'department',
+      },
+      {
+        title: 'designation',
+        value: 'designation',
+      },
+      {
+        title: 'employee',
+        value: 'employee',
+      },
+      {
+        title: 'project',
+        value: 'project',
+      },
+      {
+        title: 'task',
+        value: 'task',
+      },
+      {
+        title: 'timesheet',
+        value: 'timesheet',
+      },
     ],
   },
 

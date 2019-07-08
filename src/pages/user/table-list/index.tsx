@@ -45,6 +45,7 @@ interface TableListProps extends FormComponentProps {
   dispatch: Dispatch<any>;
   loading: boolean;
   userTableList: StateType;
+  modelNameOptions: any[];
 }
 
 interface TableListState {
@@ -54,16 +55,17 @@ interface TableListState {
   selectedRows: TableListItem[];
   formValues: { [key: string]: string };
   stepFormValues: Partial<TableListItem>;
-  modelNameOptions: any[];
 }
 
 /* eslint react/no-multi-comp:0 */
 @connect(
   ({
     userTableList,
+    global,
     loading,
   }: {
     userTableList: StateType;
+    global: any;
     loading: {
       models: {
         [key: string]: boolean;
@@ -71,6 +73,7 @@ interface TableListState {
     };
   }) => ({
     userTableList,
+    modelNameOptions: global.models,
     loading: loading.models.rule,
   }),
 )
@@ -82,24 +85,6 @@ class TableList extends Component<TableListProps, TableListState> {
     selectedRows: [],
     formValues: {},
     stepFormValues: {},
-    modelNameOptions: [
-      {
-        title: 'user',
-        value: 'user',
-      },
-      {
-        title: 'employee',
-        value: 'employee',
-      },
-      {
-        title: 'asset',
-        value: 'asset',
-      },
-      {
-        title: 'bank',
-        value: 'bank',
-      },
-    ],
   };
 
   // hack here for table columns
@@ -337,7 +322,7 @@ class TableList extends Component<TableListProps, TableListState> {
   }
 
   renderTitle() {
-    const { modelNameOptions } = this.state;
+    const { modelNameOptions } = this.props;
     return (
       <Select showSearch defaultValue="user" style={{ width: 100, maxWidth: 220 }} onSelect={this.selectChanged}>
       {modelNameOptions.map(item => (
