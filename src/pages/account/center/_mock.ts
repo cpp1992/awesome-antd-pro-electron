@@ -48,7 +48,7 @@ const user = [
   '仲尼',
 ];
 
-function fakeList(count: number): ListItemDataType[] {
+export function fakeList(count: number): ListItemDataType[] {
   const list = [];
   for (let i = 0; i < count; i += 1) {
     list.push({

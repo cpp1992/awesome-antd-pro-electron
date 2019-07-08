@@ -18,6 +18,9 @@ interface ModelFormProps {
   userForm: {
     modelName: string
     modelFields: any[]
+  },
+  global: {
+    models: any[]
   }
 }
 
@@ -26,36 +29,19 @@ interface FormProps extends FormComponentProps {
   dispatch: Dispatch<any>;
   modelName: string;
   modelFields: any[];
+  modelNameOptions: any[];
 }
 
 // FIXED: connect接收第一个参数，包含model的命名空间
 // 返回的是一个映射后的对象
-@connect(({ userForm }: ModelFormProps) => ({
+@connect(({ global, userForm }: ModelFormProps) => ({
   modelFields: userForm.modelFields,
   modelName: userForm.modelName,
+  modelNameOptions: global.models,
 }))
 class UserForm extends Component<FormProps> {
   state = {
-    modelName: 'user',
-    modelNameOptions: [
-      {
-        title: 'user',
-        value: 'user',
-      },
-      {
-        title: 'employee',
-        value: 'employee',
-      },
-      {
-        title: 'asset',
-        value: 'asset',
-      },
-      {
-        title: 'bank',
-        value: 'bank',
-      },
-    ],
-    // modelNameOptions: window.pool.model.get('model').value(),
+    modelName: 'member',
     defaultItemList: [],
   }
 
@@ -71,7 +57,7 @@ class UserForm extends Component<FormProps> {
   }
 
   renderTitle() {
-    const { modelNameOptions } = this.state;
+    const { modelNameOptions } = this.props;
     return (
       <Select showSearch defaultValue="user" style={{ width: 100, maxWidth: 220 }} onSelect={this.selectChanged}>
       {modelNameOptions.map(item => (

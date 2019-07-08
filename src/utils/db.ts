@@ -6,16 +6,15 @@ import low, { LowdbSync } from 'lowdb';
 import FileSync from 'lowdb/adapters/FileSync';
 import Memory from 'lowdb/adapters/Memory';
 
-import user from '../../mock/user';
-import notices from '../../mock/notices';
 import rule from '../pages/user/table-list/_mock';
 import geographic from '../pages/account/settings/_mock';
+import center, { fakeList } from '../pages/account/center/_mock';
 
 // const adapter = new FileSync(join(__dirname, "data.json"));
 
 let pool: any;
 
-const collections = ['user', 'notice', 'login', 'rule', 'geographic', 'model'];
+const collections = ['user', 'post', 'notice', 'login', 'rule', 'geographic', 'model'];
 
 export const dbInitModule = (pool: any, collections: string[]): { [name: string]: any } => collections.reduce((acc, collection) => {
     const adapter = new Memory(collection);
@@ -32,18 +31,20 @@ export const dbInitModule = (pool: any, collections: string[]): { [name: string]
 pool = dbInitModule({}, collections);
 
 // init some mock data
-const currentUser = user['GET /api/currentUser'];
+const currentUser = center['GET /api/currentUser'];
 pool.login
   .get('data')
   .insert(currentUser)
   .write();
 
-notices.notices.forEach(notice => {
+currentUser.notice.forEach(notice => {
   pool.notice
     .get('data')
     .insert(notice)
     .write();
 });
+
+pool.post.set('data', fakeList(20)).write();
 
 rule.tableListDataSource.forEach(rule => {
   pool.rule
@@ -56,7 +57,7 @@ pool.geographic.set('province', geographic.province).write();
 pool.geographic.set('city', geographic.city).write();
 
 // 初始化每个对象模型的表单信息
-const MockModels = require.context('./_mocks/json', true, /\.json$/)
+const MockModels = require.context('./_mocks/json/core', true, /\.json$/)
 
 MockModels.keys().forEach((fileName: string) => {
 
@@ -72,7 +73,7 @@ MockModels.keys().forEach((fileName: string) => {
   pool[modelNameCamel].set('fields', MockModels(fileName).fields).write();
 })
 
-console.log('window pool dynamic', pool);
+console.log('[pool] window lowdb:', pool);
 
 window.pool = pool;
 

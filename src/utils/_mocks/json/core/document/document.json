@@ -1,0 +1,143 @@
+{
+  "fields": [
+    {
+      "key": "id",
+      "type": "input",
+      "label": "id"
+    },
+    {
+      "key": "year",
+      "type": "input",
+      "label": "year",
+      "placeholder": "Input year"
+    },
+    {
+      "key": "date",
+      "type": "date",
+      "label": "date",
+      "placeholder": "Input date"
+    },
+    {
+      "key": "classiLevel",
+      "type": "select",
+      "label": "classiLevel",
+      "options": [
+        {
+          "label": "机密",
+          "value": "机密"
+        },
+        {
+          "label": "秘密",
+          "value": "秘密"
+        },
+        {
+          "label": "内部",
+          "value": "内部"
+        }
+      ]
+    },
+    {
+      "key": "category",
+      "type": "input",
+      "label": "category",
+      "placeholder": "Input category"
+    },
+    {
+      "key": "inOrOut",
+      "type": "select",
+      "label": "inOrOut",
+      "placeholder": "Input inOrOut",
+      "options": []
+    },
+    {
+      "key": "sendingCode",
+      "type": "input",
+      "label": "sendingCode",
+      "placeholder": "Input sendingCode"
+    },
+    {
+      "key": "orderedNumber",
+      "type": "input",
+      "label": "orderedNumber",
+      "placeholder": "Input orderedNumber"
+    },
+    {
+      "key": "title",
+      "type": "input",
+      "label": "title",
+      "placeholder": "Input title"
+    },
+    {
+      "key": "content",
+      "type": "textarea",
+      "label": "content",
+      "placeholder": "Input content"
+    },
+    {
+      "key": "toEntity",
+      "type": "input",
+      "label": "toEntity",
+      "placeholder": "Input toEntity"
+    },
+    {
+      "key": "copyEntity",
+      "type": "input",
+      "label": "copyEntity",
+      "placeholder": "Input copyEntity"
+    },
+    {
+      "key": "attachment",
+      "type": "input",
+      "label": "attachment",
+      "placeholder": "Input attachment"
+    },
+    {
+      "key": "keyword",
+      "type": "select",
+      "label": "keyword",
+      "placeholder": "Input keyword",
+      "options": [
+        {
+          "label": "人事",
+          "value": "人事"
+        },
+        {
+          "label": "党务",
+          "value": "党务"
+        },
+        {
+          "label": "财务",
+          "value": "财务"
+        },
+        {
+          "label": "后勤",
+          "value": "后勤"
+        },
+        {
+          "label": "纪检",
+          "value": "纪检"
+        },
+        {
+          "label": "安全",
+          "value": "安全"
+        },
+        {
+          "label": "对外",
+          "value": "对外"
+        }
+      ]
+    },
+    {
+      "key": "workEntity",
+      "type": "input",
+      "label": "workEntity",
+      "placeholder": "Input workEntity"
+    },
+    {
+      "key": "author",
+      "type": "input",
+      "label": "author",
+      "placeholder": "Input author"
+    }
+  ]
+}

@@ -29,7 +29,7 @@ const Model: ModelType = {
   namespace: 'userForm',
 
   state: {
-    modelName: 'user',
+    modelName: 'member',
     modelFields: [],
   },
 

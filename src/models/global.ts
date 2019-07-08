@@ -43,21 +43,66 @@ const GlobalModel: GlobalModelType = {
   state: {
     collapsed: false,
     notices: [],
-    models: [],
+    models: [
+      [
+        {
+          title: 'member',
+          value: 'member',
+        },
+        {
+          title: 'document',
+          value: 'document',
+        },
+        {
+          title: 'event',
+          value: 'event',
+        },
+        {
+          title: 'appraisal',
+          value: 'appraisal',
+        },
+        {
+          title: 'designation',
+          value: 'designation',
+        },
+        {
+          title: 'attendance',
+          value: 'attendance',
+        },
+        {
+          title: 'department',
+          value: 'department',
+        },
+        {
+          title: 'designation',
+          value: 'designation',
+        },
+        {
+          title: 'employee',
+          value: 'employee',
+        },
+        {
+          title: 'project',
+          value: 'project',
+        },
+        {
+          title: 'task',
+          value: 'task',
+        },
+        {
+          title: 'timesheet',
+          value: 'timesheet',
+        },
+      ]
+    ],
   },
 
   effects: {
     * queryModelFields({ payload }, { call, put, select }) {
       console.log('[Effects] Query model payload: ', payload);
-      // With effects
       const type = 'userForm/changeModelName';
-      // Without effects
-      // const type = `userForm/save`;
-
       const response: LfResponse = yield call(queryModelFields, payload);
       const fields = response.data.entity;
-
-      // call/put to userForm model
       yield call({
         type,
         payload: {

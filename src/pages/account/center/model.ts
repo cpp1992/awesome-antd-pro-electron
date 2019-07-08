@@ -1,7 +1,8 @@
 import { AnyAction, Reducer } from 'redux';
 import { EffectsCommandMap } from 'dva';
 import { CurrentUser, ListItemDataType } from './data.d';
-import { queryCurrent, queryFakeList } from './service';
+import { queryCurrentUser, queryPost } from './service';
+import { LfResponse } from '@/interface';
 
 export interface ModalState {
   currentUser: Partial<CurrentUser>;
@@ -36,17 +37,19 @@ const Model: ModelType = {
 
   effects: {
     * fetchCurrent(_, { call, put }) {
-      const response = yield call(queryCurrent);
+      const response: LfResponse = yield call(queryCurrentUser);
+      const payload = response.data.entity[0];
       yield put({
         type: 'saveCurrentUser',
-        payload: response,
+        payload,
       });
     },
     * fetch({ payload }, { call, put }) {
-      const response = yield call(queryFakeList, payload);
+      const response: LfResponse = yield call(queryPost, payload);
+      const result = response.data.entity;
       yield put({
         type: 'queryList',
-        payload: Array.isArray(response) ? response : [],
+        payload: Array.isArray(result) ? result : [],
       });
     },
   },

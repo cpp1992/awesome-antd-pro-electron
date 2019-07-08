@@ -1,11 +1,14 @@
-import request from 'umi-request';
-
-export async function queryCurrent() {
-  return request('/api/currentUser');
+export async function queryCurrentUser() {
+  return window.api.request({
+    url: '/api/login/data',
+    data: {
+      userid: '00000001',
+    },
+  });
 }
 
-export async function queryFakeList(params: { count: number }) {
-  return request('/api/fake_list', {
-    params,
+export async function queryPost(params: { count: number }) {
+  return window.api.request({
+    url: '/api/post/data'
   });
 }
