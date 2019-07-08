@@ -5,6 +5,10 @@
     "type": "github",
     "url": "https://github.com/linuxing/awesome-antd-pro-electron"
   },
+  "author": {
+    "name": "linuxing3",
+    "email": "linuxing3@qq.com"
+  },
   "private": true,
   "main": "main.js",
   "description": "An out-of-box UI solution for enterprise applications with electron",
@@ -15,7 +19,8 @@
     "start:no-mock": "cross-env MOCK=none umi dev",
     "analyze": "cross-env ANALYZE=1 umi build",
     "build": "umi build",
-    "electron": "electron .",
+    "electron": "cross-env NODE_ENV=production electron .",
+    "electron:dev": "electron .",
     "electron:build": "electron-builder",
     "electron:pack": "electron-builder --dir",
     "deploy": "cross-env ANT_DESIGN_PRO_ONLY_DO_NOT_USE_IN_YOUR_PRODUCTION=site npm run site && npm run gh-pages",
@@ -32,7 +37,8 @@
     "prettier": "prettier -c --write **/*",
     "test": "umi test",
     "test:all": "node ./tests/run-tests.js",
-    "test:component": "umi test ./src/components"
+    "test:component": "umi test ./src/components",
+    "postinstall": "electron-builder install-app-deps"
   },
   "browserslist": [
     "> 1%",
@@ -94,6 +100,7 @@
     "cross-port-killer": "^1.1.1",
     "electron": "^5.0.6",
     "electron-builder": "^20.44.4",
+    "electron-devtools-installer": "^2.2.4",
     "enzyme": "^3.9.0",
     "eslint": "^5.16.0",
     "fetch-blocks": "^1.0.0",
@@ -129,5 +136,11 @@
     "src/**/*.less",
     "config/**/*.js*",
     "scripts/**/*.js"
-  ]
+  ],
+  "build": {
+    "appId": "com.electron.antd.pro",
+    "directories": {
+      "output": "dist_electron"
+    }
+  }
 }

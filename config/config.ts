@@ -75,6 +75,7 @@ export default {
   block: {
     defaultGitUrl: 'https://github.com/ant-design/pro-blocks',
   },
+  publicPath: './',
   history: 'hash',
   // router mode, hash for electron
   hash: true,
@@ -88,12 +89,10 @@ export default {
     {
       path: '/login',
       component: '../layouts/UserLayout',
-      Routes: ['src/pages/Authorized'],
-      authority: ['admin', 'user', 'guest'],
       routes: [
         {
           name: 'login',
-          path: '/login/login',
+          path: '/login',
           component: './account/login',
         },
       ],
@@ -141,12 +140,6 @@ export default {
               component: './account/settings',
             },
           ],
-        },
-        {
-          path: '/',
-          name: 'welcome',
-          icon: 'smile',
-          component: './Welcome',
         },
         {
           component: './404',

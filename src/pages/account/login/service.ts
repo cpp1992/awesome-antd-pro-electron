@@ -1,13 +1,13 @@
-import request from 'umi-request';
 import { FromDataType } from './index';
 
-export async function fakeAccountLogin(params: FromDataType) {
-  return request('/api/login/account', {
-    method: 'POST',
+export async function accountLogin(params: FromDataType) {
+  return window.api.request({
+    url: '/api/login/data',
+    method: 'post',
     data: params,
   });
 }
 
 export async function getFakeCaptcha(mobile: string) {
-  return request(`/api/login/captcha?mobile=${mobile}`);
+  return window.api.request(`/api/login/captcha?mobile=${mobile}`);
 }

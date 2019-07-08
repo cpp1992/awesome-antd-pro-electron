@@ -1,7 +1,7 @@
 import { AnyAction, Reducer } from 'redux';
 import { EffectsCommandMap } from 'dva';
 import { routerRedux } from 'dva/router';
-import { accountLogin, getFakeCaptcha } from './service.local';
+import { accountLogin, getFakeCaptcha } from './service';
 import { getPageQuery, setAuthority } from './utils/utils';
 import { LfResponse } from '@/interface';
 
@@ -60,7 +60,7 @@ const Model: ModelType = {
             return;
           }
         }
-        yield put(routerRedux.replace(redirect || '/'));
+        yield put(routerRedux.replace(redirect || '/login'));
       }
     },
 
