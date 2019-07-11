@@ -1,4 +1,4 @@
-import { curry, pipe, map } from 'lodash/fp';
+import { pipe, map } from 'lodash/fp';
 /**
  * 美化命令行终端日志输出
  */

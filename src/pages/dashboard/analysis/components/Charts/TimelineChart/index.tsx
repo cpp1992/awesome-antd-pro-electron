@@ -47,7 +47,9 @@ const TimelineChart: React.FC<TimelineChartProps> = props => {
     );
   }
 
-  const ds = new DataSet({
+  const dds: any = DataSet;
+
+  const ds = new dds({
     state: {
       start: data[0].x,
       end: data[data.length - 1].x,

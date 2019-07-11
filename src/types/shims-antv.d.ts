@@ -7,8 +7,14 @@ declare module '@antv/data-set' {
     state: any
   }
 
+  class DataView extends View {
+
+  }
+
   class DataSet extends EventEmitter {
-    // constructor(initialProps?: DataSetState);
+
+    constructor(initialProps?: DataSetState);
+
     _getUniqueViewName(): any;
 
     createView(name: any, options?: {}): View;
@@ -21,7 +27,9 @@ declare module '@antv/data-set' {
   }
 
   class View extends EventEmitter {
-    // constructor(dataSet?: any, options?: any);
+
+    constructor(dataSet?: any, options?: any);
+
     /**
      * 数据列
      */

@@ -7,7 +7,7 @@ import {
  LfResponse, LfService, BaseData, LfRequestOption,
 } from '@/interface';
 import { builder, baseData } from '@/utils/builder';
-import { log } from '@/utils';
+import { log } from './index';
 import pool from './db';
 
 /**

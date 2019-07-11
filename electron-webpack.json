@@ -1,0 +1,12 @@
+{
+  "commonSourceDirectory": "src",
+  "staticSourceDirectory": "public",
+  "title": true,
+  "whiteListedModules": [],
+  "main": {
+    "sourceDirectory": "main"
+  },
+  "renderer": {
+    "sourceDirectory": null
+  }
+}

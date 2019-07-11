@@ -26,7 +26,7 @@ const createWindow = async () => {
   } else {
     win.loadURL(
       url.format({
-        pathname: path.join(__dirname, 'dist/index.html'),
+        pathname: path.join(__dirname, '../index.html'),
         protocol: 'file:',
         slashes: true,
       }),
@@ -35,8 +35,6 @@ const createWindow = async () => {
 
   if (process.env.NODE_ENV !== 'production') {
     // Open DevTools
-    win.webContents.openDevTools();
-  } else {
     win.webContents.openDevTools();
   }
 

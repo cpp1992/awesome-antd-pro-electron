@@ -8,7 +8,7 @@ import { Dispatch } from 'redux';
 import { FormComponentProps } from 'antd/es/form';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
 import { connect } from 'dva';
-import { log } from '@/utils';
+import { log } from '../../../utils';
 
 import MForm from '@/components/MForm';
 

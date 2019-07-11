@@ -9,6 +9,6 @@ export async function queryCurrentUser() {
 
 export async function queryPost(params: { count: number }) {
   return window.api.request({
-    url: '/api/post/data'
+    url: '/api/post/data',
   });
 }
