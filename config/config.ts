@@ -105,7 +105,7 @@ export default {
       routes: [
         {
           path: '/',
-          redirect: '/dashboard/analysis',
+          redirect: '/login',
         },
         {
           name: 'dashboard',

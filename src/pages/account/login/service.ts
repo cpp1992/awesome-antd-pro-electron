@@ -3,7 +3,6 @@ import { FromDataType } from './index';
 export async function accountLogin(params: FromDataType) {
   return window.api.request({
     url: '/api/login/data',
-    method: 'post',
     data: params,
   });
 }

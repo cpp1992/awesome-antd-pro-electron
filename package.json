@@ -14,7 +14,7 @@
   "description": "An out-of-box UI solution for enterprise applications with electron",
   "scripts": {
     "start": "umi dev",
-    "dev": "umi dev && electron-webpack dev",
+    "dev": "umi dev",
     "dist": "yarn renderer:build && yarn main:build && yarn electron:build",
     "start:no-mock": "cross-env MOCK=none umi dev",
     "analyze": "cross-env ANALYZE=1 umi build",
@@ -135,6 +135,15 @@
   },
   "engines": {
     "node": ">=10.0.0"
+  },
+  "lint-staged": {
+    "**/*.less": "stylelint --syntax less",
+    "**/*.{js,jsx,tsx,ts,less,md,json}": [
+      "prettier --write",
+      "git add"
+    ],
+    "**/*.{js,jsx}": "npm run lint-staged:js",
+    "**/*.{js,ts,tsx}": "npm run lint-staged:js"
   },
   "checkFiles": [
     "src/**/*.js*",

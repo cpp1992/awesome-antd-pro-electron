@@ -79,6 +79,10 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
     if (dispatch) {
       dispatch({
         type: 'user/fetchCurrent',
+        payload: {
+          // userid: '00000001',
+          name: 'Serati Ma',
+        }
       });
       dispatch({
         type: 'settings/getSetting',

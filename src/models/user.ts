@@ -50,12 +50,13 @@ const UserModel: UserModelType = {
         payload,
       });
     },
-    * fetchCurrent(_, { call, put }) {
-      const response: LfResponse = yield call(queryCurrent);
-      const payload: CurrentUser = response.data.entity[0];
+    * fetchCurrent({ payload }, { call, put }) {
+      // hack here to get modules
+      const response: LfResponse = yield call(queryCurrent, payload);
+      const user: CurrentUser = response.data.entity[0];
       yield put({
         type: 'saveCurrentUser',
-        payload,
+        payload: user,
       });
     },
   },

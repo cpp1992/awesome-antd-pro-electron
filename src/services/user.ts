@@ -6,11 +6,11 @@ export async function query(): Promise<any> {
   });
 }
 
-export async function queryCurrent(): Promise<any> {
+export async function queryCurrent(params: any): Promise<any> {
   return lfService.request({
     url: '/api/login/data',
     data: {
-      userid: '00000001',
+      userid: params.userid,
     },
   });
 }

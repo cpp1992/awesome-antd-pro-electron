@@ -60,7 +60,7 @@ const Model: ModelType = {
             return;
           }
         }
-        yield put(routerRedux.replace(redirect || '/login'));
+        yield put(routerRedux.replace(redirect || '/dashboard/analysis'));
       }
     },
 

@@ -45,11 +45,12 @@ const AuthComponent: React.FC<AuthComponentProps> = ({
 }) => {
   const { currentUser } = user;
   const { routes = [] } = route;
+  // 判断是否已获取用户信息
   const isLogin = currentUser && currentUser.name;
   return (
     <Authorized
       authority={getRouteAuthority(location.pathname, routes) || ''}
-      noMatch={isLogin ? <Redirect to="/exception/403" /> : <Redirect to="/login" />}
+      noMatch={isLogin ? <Redirect to="/exception/403" /> : <Redirect to="/dashboard/analysis" />}
     >
       {children}
     </Authorized>
